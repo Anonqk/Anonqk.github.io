@@ -1,0 +1,318 @@
+.Titulo {
+    position: absolute;
+    width: 364px;
+    height: 54px;
+    left: 6%;
+    top: 26px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 45px;
+    line-height: 54px;
+    color: #000000;
+    white-space: nowrap;
+    border-right: 4px solid;
+    animation: typing 2s steps(100), blink .5s infinite step-end;
+    overflow: hidden;
+    transition: .5s
+}
+@keyframes typing {
+    from {
+      width: 0;
+    }
+  }
+  
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+
+.CajaTexto {
+    position: relative;
+    left: 18%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 59px;
+    top: 73px;
+}
+
+.NombreProducto {
+    display: flex;
+    gap: 60px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 42px;
+    color: #000000;
+}
+
+input.txtNombreProducto {
+    box-sizing: border-box;
+    width: 730px;
+    height: 51px;
+    border: 3px solid #000000;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 8px;
+}
+
+input.txtStock {
+    box-sizing: border-box;
+    width: 289px;
+    height: 51px;
+    border: 3px solid #000000;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 8px;
+}
+
+.Precio_Stock {
+   
+    display: flex;
+    gap: 118px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 45px;
+    color: #000000;
+}
+
+
+
+input.txtPrecio {
+    box-sizing: border-box;
+    width: 289px;
+    height: 50px;
+    border: 3px solid #000000;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 8px;
+}
+
+button.REGISTRAR {
+    width: 310px;
+    height: 62px;
+    background: #1BAA4D;
+    opacity: 85%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 25px;
+    text-align: center;
+    color: #005C21;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    left: 3.4%;
+    right: 75.07%;
+    top: 32.13%;
+    bottom: 61.82%;
+}
+
+button.EDITAR {
+    width: 310px;
+    height: 62px;
+    background: #E8FD65;
+    box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 25px;
+    text-align: center;
+    color: #2D2F2F;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    left: 26.61%;
+    right: 21.86%;
+    top: 32.32%;
+    bottom: 61.62%;
+}
+
+button.LIMPIAR {
+    width: 310px;
+    height: 62px;
+    background: #D0DDE0;
+    opacity: 85%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 25px;
+    text-align: center;
+    color: #2D2F2F;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    left: 49.93%;
+    right: 28.54%;
+    top: 32.32%;
+    bottom: 61.72%;
+}
+
+button.CANCELAR {
+    width: 310px;
+    height: 62px;
+    opacity: 81%;
+    background: #FF0008;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 25px;
+    text-align: center;
+    color: #810606;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    left: 73.61%;
+    right: 4.86%;
+    top: 32.32%;
+    bottom: 61.62%;
+}
+
+button.Volver {
+    position: absolute;
+    top: 100%;
+    right: 1%;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 25px;
+    text-align: center;
+    color: #000000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+}
+.BuscarProducto {
+    box-sizing: border-box;
+    position: absolute;
+    width: 1323px;
+    height: 39px;
+    left: 136px;
+    top: 404px;
+    border-width: 3px 3px 0px 3px;
+    border-style: solid;
+    border-color: #3A3838;
+    border-radius: 0px;
+}
+
+input.txtBuscarCliente {
+    right: 4%;
+    width: 1257px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 29px;
+    display: flex;
+    flex-direction: column-reverse;
+    position: absolute;
+}
+
+input.imgBuscar {
+    position: absolute;
+    right: 0.5%;
+    top: 10%;
+}
+
+.Tabla {
+    position: absolute;
+    display: grid;
+    left: 49px;
+    top: 448px;
+    border: 1px solid #000000;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    border-width: 3px 3px 3px 3px;
+    width: 91.5%;
+}
+
+table#Tabla\ Registro {
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #ffffff;
+    border: 1px solid #000000;
+}
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+  justify-content: center;
+  padding: 5px;
+
+}
+
+table {
+  border-radius: 9px;
+  border: 1px solid #000000;
+  border-collapse: separate;
+
+  border-radius: 15px;
+  border-spacing: 0.2px;
+  position: absolute;
+
+  left: 8.5%;
+  top: 441px;
+  width: 1314px;
+
+  height: 400px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 20px;
+}
+
+th,
+td {
+  width: 20px;
+  height: 30px;
+}
+
+th {
+  background-color: #E3E3E3;
+}
+
+table tr:nth-child(odd) td {
+  background-color: #E3E3E3;
+
+}
+.franja {
+    position: absolute;
+    width: 1415px;
+    height: 8px;
+    /* left: 67px; */
+    left: 5.4%;
+    top: 96.17px;
+    background: #000000;
+  }
+
