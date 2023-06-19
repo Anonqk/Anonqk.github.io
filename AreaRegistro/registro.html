@@ -1,52 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrar Usuario</title>
     <link rel="stylesheet" href="registro.css">
+    <link rel="icon" type="image/x-icon" href="logoECODAR.png">
 </head>
+
 <body>
     <div class="banner">
         <h1>Registrar Usuario</h1>
     </div>
 
     <div class="container">
-
         <div class="logo">
             <img src="logoECODAR.png" alt="Logo ECODAR">
         </div>
 
         <form class="login-form">
-
-            <div class="form-group" >
-                <input type="text" id="usuario" name="usuario" placeholder="Ingrese su Nombre Completo">
+            <div class="form-group">
+                <input type="text" id="register-nombre" name="usuario" placeholder="Ingrese su Nombre Completo">
                 <img src="userIcon.svg" class="icons">
             </div>
 
-            <div class="form-group" >
-                <input type="text" id="usuario" name="usuario" placeholder="Ingrese su Email o Usuario">
+            <div class="form-group">
+                <input type="text" id="register-email" name="usuario" placeholder="Ingrese su Email">
                 <img src="mailIcon.svg" class="icons">
             </div>
 
-
-            <div class="form-group" >
-                <input type="password" id="contrasena" name="contrasena" placeholder="Ingrese su contraseña">
+            <div class="form-group">
+                <input type="password" id="register-contrasena" name="contrasena" placeholder="Ingrese su contraseña">
                 <img src="passwordIcon.svg" class="icons">
             </div>
 
-            <div class="form-group" >
-                <input type="text" id="usuario" name="usuario" placeholder="Confirmar Contraseña">
+            <div class="form-group">
+                <input type="password" id="confirmarcontrasena" name="verifcontrasena" placeholder="Confirmar Contraseña">
                 <img src="passwordIcon.svg" class="icons">
             </div>
 
-
-
-            <button type="button" onclick="window.location.href='../index.html'">Registrarse</button>
-
+            <button type="button" onclick="registerUser()">Registrarse</button>
         </form>
     </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="registro.js"></script>
 </body>
 
 </html>
