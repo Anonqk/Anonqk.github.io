@@ -98,3 +98,8 @@ p.descripciones {
   font-size: 85%;
   margin: 0 15%;
 }
+
+.logo {
+  display: grid;
+  place-content: center;
+}
