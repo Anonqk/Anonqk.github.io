@@ -86,13 +86,13 @@ img.iconos {
   height: 50%;
 }
 
-.titulos {
+ h3.titulos {
   font-size: 180%;
   margin-bottom: 5px;
   margin-top: 0;
 }
 
-.descripciones {
+p.descripciones {
   color: #383838;
   font-weight: 500;
   font-size: 85%;
