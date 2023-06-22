@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reportes</title>
+    <link rel="stylesheet" href="reportes.css" />
+    <link rel="icon" type="image/x-icon" href="../logoECODAR.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="row">
+      <div class="col-sm-6 mb-3 mb-sm-0" style="max-width: 12rem">
+        <div
+          class="card border-dark mb-3"
+          id="card-ventasdia"
+          style="max-width: 12rem"
+        >
+          <div class="card-header">Ventas del día</div>
+          <div class="card-body text-dark">
+            <h5 class="card-title">
+              <span class="dinero-monto">S/80.20</span>
+              <img
+                class="dinero-icon"
+                src="dineroIcon.svg"
+                alt="Icono de dinero"
+              />
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6" style="max-width: 12rem">
+        <div
+          class="card border-dark mb-3"
+          id="card-ventasmes"
+          style="max-width: 12rem"
+        >
+          <div class="card-header">Ventas del mes</div>
+          <div class="card-body text-dark">
+            <h5 class="card-title">
+              <span class="dinero-monto">S/440.20</span>
+              <img
+                class="dinero-icon"
+                src="dineroIcon.svg"
+                alt="Icono de dinero"
+              />
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-9">
+          <div class="row">
+            <div class="col">
+              <img
+                src="/AreaReportes/reportesICON.svg"
+                alt="Logo de la Empresa"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">Área de Reporte</div>
+          </div>
+        </div>
+        <div class="col-3">
+          <img src="../logoECODAR.png" alt="Logo de la Empresa" />
+        </div>
+      </div>
+    </div>
+
+    <div class="card border-dark mb-3">
+      <div class="card-header">
+        <ul class="nav nav-tabs card-header-tabs">
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              data-bs-toggle="tab"
+              href="#tab-ventas-dia"
+              >Ventas del día</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#tab-ventas-mes"
+              >Ventas del mes</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="card-body">
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="tab-ventas-dia">
+            <div class="table-responsive">
+              <table class="table table-striped table-hover">
+                <thead class="table-dark">
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Código</th>
+                    <th scope="col">Descripción del Producto</th>
+                    <th scope="col">Cantidad</th>
+                    <th scope="col">Sub total</th>
+                    <!-- Nueva columna -->
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">01</th>
+                    <td>C000001</td>
+                    <td>BOTELLA AGUA CIELO 1L</td>
+                    <td>1</td>
+                    <td>S/3.00</td>
+                    <!-- Nuevo dato -->
+                  </tr>
+                  <tr>
+                    <th scope="row">02</th>
+                    <td>C000002</td>
+                    <td>LAPICEROS RECARGABLES</td>
+                    <td>2</td>
+                    <td>S/5.00</td>
+                    <!-- Nuevo dato -->
+                  </tr>
+                  <tr>
+                    <th scope="row">03</th>
+                    <td>C000003</td>
+                    <td>INFLADOR DE GLOBOS</td>
+                    <td>1</td>
+                    <td>S/15.00</td>
+                    <!-- Nuevo dato -->
+                  </tr>
+                  <!-- Agrega más filas y datos según sea necesario -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="tab-ventas-mes">
+            <div class="table-responsive">
+              <table class="table table-hover">
+                <thead class="table-dark">
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Código</th>
+                    <th scope="col">Descripción del Producto</th>
+                    <th scope="col">Cantidad</th>
+                    <th scope="col">Sub total</th>
+                    <!-- Nueva columna -->
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">01</th>
+                    <td>C000001</td>
+                    <td>BOTELLA AGUA CIELO 1L</td>
+                    <td>1</td>
+                    <td>S/3.00</td>
+                    <!-- Nuevo dato -->
+                  </tr>
+                  <tr>
+                    <th scope="row">02</th>
+                    <td>C000002</td>
+                    <td>LAPICEROS RECARGABLES</td>
+                    <td>2</td>
+                    <td>S/5.00</td>
+                    <!-- Nuevo dato -->
+                  </tr>
+                  <tr>
+                    <th scope="row">03</th>
+                    <td>C000003</td>
+                    <td>INFLADOR DE GLOBOS</td>
+                    <td>1</td>
+                    <td>S/15.00</td>
+                    <!-- Nuevo dato -->
+                  </tr>
+                  <!-- Agrega más filas y datos según sea necesario -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container text-center">
+      <div class="row">
+        <div class="col">
+          <div class="card h-100">
+            <div
+              class="card border-dark mb-3 d-flex flex-fill"
+              id="card-clientesmayorgasto"
+            >
+              <div class="card-header">Clientes con mayor gasto:</div>
+              <div class="card-body text-dark">
+                <div class="table-responsive">
+                  <table class="table table-striped table-hover">
+                    <thead class="table-dark">
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Código</th>
+                        <th scope="col">Descripción del Producto</th>
+                        <th scope="col">Cantidad</th>
+                        <th scope="col">Sub total</th>
+                        <!-- Nueva columna -->
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">01</th>
+                        <td>C000001</td>
+                        <td>BOTELLA AGUA CIELO 1L</td>
+                        <td>1</td>
+                        <td>S/3.00</td>
+                        <!-- Nuevo dato -->
+                      </tr>
+                      <tr>
+                        <th scope="row">02</th>
+                        <td>C000002</td>
+                        <td>LAPICEROS RECARGABLES</td>
+                        <td>2</td>
+                        <td>S/5.00</td>
+                        <!-- Nuevo dato -->
+                      </tr>
+                      <tr>
+                        <th scope="row">03</th>
+                        <td>C000003</td>
+                        <td>INFLADOR DE GLOBOS</td>
+                        <td>1</td>
+                        <td>S/15.00</td>
+                        <!-- Nuevo dato -->
+                      </tr>
+                      <!-- Agrega más filas y datos según sea necesario -->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <div
+              class="card border-dark mb-3 d-flex flex-fill"
+              id="card-productosmasvendidos"
+            >
+              <div class="card-header">Productos más vendidos:</div>
+              <div class="card-body text-dark">
+                <div class="table-responsive">
+                  <table class="table table-striped table-hover">
+                    <thead class="table-dark">
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Código</th>
+                        <th scope="col">Descripción del Producto</th>
+                        <th scope="col">Cantidad</th>
+                        <th scope="col">Sub total</th>
+                        <!-- Nueva columna -->
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">01</th>
+                        <td>C000001</td>
+                        <td>BOTELLA AGUA CIELO 1L</td>
+                        <td>1</td>
+                        <td>S/3.00</td>
+                        <!-- Nuevo dato -->
+                      </tr>
+                      <tr>
+                        <th scope="row">02</th>
+                        <td>C000002</td>
+                        <td>LAPICEROS RECARGABLES</td>
+                        <td>2</td>
+                        <td>S/5.00</td>
+                        <!-- Nuevo dato -->
+                      </tr>
+                      <tr>
+                        <th scope="row">03</th>
+                        <td>C000003</td>
+                        <td>INFLADOR DE GLOBOS</td>
+                        <td>1</td>
+                        <td>S/15.00</td>
+                        <!-- Nuevo dato -->
+                      </tr>
+                      <!-- Agrega más filas y datos según sea necesario -->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <div
+              class="card border-dark mb-3 d-flex flex-fill"
+              id="card-stockbajo"
+            >
+              <div class="card-header text-bg-danger">
+                Productos con stock bajo:
+              </div>
+              <div class="card-body text-dark">
+                <div class="table-responsive">
+                  <table class="table table-hover">
+                    <thead class="table-danger">
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Código</th>
+                        <th scope="col">Descripción del Producto</th>
+                        <th scope="col">Cantidad</th>
+
+                        <!-- Nueva columna -->
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">01</th>
+                        <td>C000001</td>
+                        <td>BOTELLA AGUA CIELO 1L</td>
+                        <td>1</td>
+
+                        <!-- Nuevo dato -->
+                      </tr>
+                      <tr>
+                        <th scope="row">02</th>
+                        <td>C000002</td>
+                        <td>LAPICEROS RECARGABLES</td>
+                        <td>2</td>
+
+                        <!-- Nuevo dato -->
+                      </tr>
+                      <tr>
+                        <th scope="row">03</th>
+                        <td>C000003</td>
+                        <td>INFLADOR DE GLOBOS</td>
+                        <td>1</td>
+
+                        <!-- Nuevo dato -->
+                      </tr>
+                      <!-- Agrega más filas y datos según sea necesario -->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
