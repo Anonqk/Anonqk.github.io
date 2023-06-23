@@ -2,3 +2,19 @@
   display: inline-block;
   margin-left: 5px;
 }
+
+div#tarjetas\+iconos {
+  margin: 1rem;
+}
+div#contenedor-tarjetapestañas-tablas\+ventasdiaymes {
+  margin: 1rem;
+}
+a.nav-link {
+  color: black;
+}
+.sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #fff;
+}

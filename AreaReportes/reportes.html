@@ -5,23 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reportes</title>
     <link rel="stylesheet" href="reportes.css" />
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <link rel="icon" type="image/x-icon" href="../logoECODAR.png" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
     />
   </head>
+
   <body>
-    <div class="row">
-      <div class="col-sm-6 mb-3 mb-sm-0" style="max-width: 12rem">
+    <div class="row row-cols-2 row-cols-lg-5 g-3" id="tarjetas+iconos">
+      <!-- COLUMNA ICONO DE AREA -->
+      <div class="col-lg-2 order-lg-3">
+        <div class="card h-100 border-0">
+          <div
+            class="d-flex justify-content-center align-items-center"
+            style="height: 75%"
+          >
+            <img
+              src="/AreaReportes/reportesICON.svg"
+              class="card-img-top"
+              alt="Logo de la Empresa"
+              style="max-width: 7rem"
+            />
+          </div>
+          <div
+            class="card-body text-center"
+            style="--bs-card-spacer-y: 0; padding: 0"
+          >
+            <h5 class="card-text" id="tituloArea" style="padding-bottom: 0rem">
+              Área de Reportes
+            </h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- COLUMNA LOGO DE EMPRESA -->
+      <div class="col-lg-2 order-lg-4 text-center">
         <div
-          class="card border-dark mb-3"
-          id="card-ventasdia"
-          style="max-width: 12rem"
+          class="card mb-3 h-100 border-0"
+          id="card_icono+tituloarea"
+          style="max-width: 12rem; margin: 0 auto"
         >
-          <div class="card-header">Ventas del día</div>
+          <div class="d-flex align-items-center" style="height: 100%">
+            <img
+              src="../logoECODAR.png"
+              id="logoEmpresa"
+              alt="Logo de la Empresa"
+              style="max-height: 100%; max-width: 100%; object-fit: contain"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- COLUMNA VENTAS DEL DIA -->
+      <div class="col-lg-2 order-lg-1 text-center">
+        <div
+          class="card border-dark mb-3 h-100"
+          id="card-ventasdia"
+          style="max-width: 12rem; margin: 0 auto"
+        >
+          <div class="card-header"><h5>Ventas del día</h5></div>
           <div class="card-body text-dark">
-            <h5 class="card-title">
+            <h5 class="card-title text-end">
               <span class="dinero-monto">S/80.20</span>
               <img
                 class="dinero-icon"
@@ -32,15 +80,17 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-6" style="max-width: 12rem">
+
+      <!-- COLUMNA VENTAS DEL MES -->
+      <div class="col-lg-2 order-lg-2 text-center">
         <div
-          class="card border-dark mb-3"
+          class="card border-dark mb-3 h-100"
           id="card-ventasmes"
-          style="max-width: 12rem"
+          style="max-width: 12rem; margin: 0 auto"
         >
-          <div class="card-header">Ventas del mes</div>
+          <div class="card-header"><h5>Ventas del mes</h5></div>
           <div class="card-body text-dark">
-            <h5 class="card-title">
+            <h5 class="card-title text-end">
               <span class="dinero-monto">S/440.20</span>
               <img
                 class="dinero-icon"
@@ -51,205 +101,356 @@
           </div>
         </div>
       </div>
-    </div>
-
-    <div class="container">
-      <div class="row">
-        <div class="col-9">
-          <div class="row">
-            <div class="col">
-              <img
-                src="/AreaReportes/reportesICON.svg"
-                alt="Logo de la Empresa"
-              />
-            </div>
-          </div>
-          <div class="row">
-            <div class="col">Área de Reporte</div>
-          </div>
-        </div>
-        <div class="col-3">
-          <img src="../logoECODAR.png" alt="Logo de la Empresa" />
-        </div>
+      <!-- SEPARADOR PARA EL TAMAÑO TABLET -->
+      <div class="col-lg-4 order-lg-2 text-center d-none d-lg-block">
+        <div
+          class="card mb-3 h-100 border-0"
+          style="max-width: 12rem; margin: 0 auto"
+        ></div>
       </div>
     </div>
 
-    <div class="card border-dark mb-3">
-      <div class="card-header">
-        <ul class="nav nav-tabs card-header-tabs">
-          <li class="nav-item">
-            <a
-              class="nav-link active"
-              data-bs-toggle="tab"
-              href="#tab-ventas-dia"
-              >Ventas del día</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="tab" href="#tab-ventas-mes"
-              >Ventas del mes</a
-            >
-          </li>
-        </ul>
-      </div>
-      <div class="card-body">
-        <div class="tab-content">
-          <div class="tab-pane fade show active" id="tab-ventas-dia">
-            <div class="table-responsive">
-              <table class="table table-striped table-hover">
-                <thead class="table-dark">
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Código</th>
-                    <th scope="col">Descripción del Producto</th>
-                    <th scope="col">Cantidad</th>
-                    <th scope="col">Sub total</th>
-                    <!-- Nueva columna -->
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">01</th>
-                    <td>C000001</td>
-                    <td>BOTELLA AGUA CIELO 1L</td>
-                    <td>1</td>
-                    <td>S/3.00</td>
-                    <!-- Nuevo dato -->
-                  </tr>
-                  <tr>
-                    <th scope="row">02</th>
-                    <td>C000002</td>
-                    <td>LAPICEROS RECARGABLES</td>
-                    <td>2</td>
-                    <td>S/5.00</td>
-                    <!-- Nuevo dato -->
-                  </tr>
-                  <tr>
-                    <th scope="row">03</th>
-                    <td>C000003</td>
-                    <td>INFLADOR DE GLOBOS</td>
-                    <td>1</td>
-                    <td>S/15.00</td>
-                    <!-- Nuevo dato -->
-                  </tr>
-                  <!-- Agrega más filas y datos según sea necesario -->
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <div class="tab-pane fade" id="tab-ventas-mes">
-            <div class="table-responsive">
-              <table class="table table-hover">
-                <thead class="table-dark">
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Código</th>
-                    <th scope="col">Descripción del Producto</th>
-                    <th scope="col">Cantidad</th>
-                    <th scope="col">Sub total</th>
-                    <!-- Nueva columna -->
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">01</th>
-                    <td>C000001</td>
-                    <td>BOTELLA AGUA CIELO 1L</td>
-                    <td>1</td>
-                    <td>S/3.00</td>
-                    <!-- Nuevo dato -->
-                  </tr>
-                  <tr>
-                    <th scope="row">02</th>
-                    <td>C000002</td>
-                    <td>LAPICEROS RECARGABLES</td>
-                    <td>2</td>
-                    <td>S/5.00</td>
-                    <!-- Nuevo dato -->
-                  </tr>
-                  <tr>
-                    <th scope="row">03</th>
-                    <td>C000003</td>
-                    <td>INFLADOR DE GLOBOS</td>
-                    <td>1</td>
-                    <td>S/15.00</td>
-                    <!-- Nuevo dato -->
-                  </tr>
-                  <!-- Agrega más filas y datos según sea necesario -->
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container text-center">
-      <div class="row">
+    <!--TARJETA QUE MUESTRA LA TABLA CON LAS VENTAS DEL DIA Y DEL MES-->
+    <div
+      class="container-fluid text-center"
+      id="contenedor-tablasventasygrafico"
+    >
+      <div class="row mx-4">
+        <!--TARJETA VENTAS DEL DIA-->
         <div class="col">
-          <div class="card h-100">
-            <div
-              class="card border-dark mb-3 d-flex flex-fill"
-              id="card-clientesmayorgasto"
-            >
-              <div class="card-header">Clientes con mayor gasto:</div>
-              <div class="card-body text-dark">
-                <div class="table-responsive">
-                  <table class="table table-striped table-hover">
-                    <thead class="table-dark">
-                      <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Código</th>
-                        <th scope="col">Descripción del Producto</th>
-                        <th scope="col">Cantidad</th>
-                        <th scope="col">Sub total</th>
-                        <!-- Nueva columna -->
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">01</th>
-                        <td>C000001</td>
-                        <td>BOTELLA AGUA CIELO 1L</td>
-                        <td>1</td>
-                        <td>S/3.00</td>
-                        <!-- Nuevo dato -->
-                      </tr>
-                      <tr>
-                        <th scope="row">02</th>
-                        <td>C000002</td>
-                        <td>LAPICEROS RECARGABLES</td>
-                        <td>2</td>
-                        <td>S/5.00</td>
-                        <!-- Nuevo dato -->
-                      </tr>
-                      <tr>
-                        <th scope="row">03</th>
-                        <td>C000003</td>
-                        <td>INFLADOR DE GLOBOS</td>
-                        <td>1</td>
-                        <td>S/15.00</td>
-                        <!-- Nuevo dato -->
-                      </tr>
-                      <!-- Agrega más filas y datos según sea necesario -->
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
+          <div class="card h-100 border-0">
             <div
               class="card border-dark mb-3 d-flex flex-fill"
               id="card-productosmasvendidos"
             >
-              <div class="card-header">Productos más vendidos:</div>
+              <div class="card-header"><h5>Ventas del día:</h5></div>
               <div class="card-body text-dark">
-                <div class="table-responsive">
+                <div
+                  class="table-responsive"
+                  style="max-height: 400px; overflow-y: auto"
+                >
                   <table class="table table-striped table-hover">
-                    <thead class="table-dark">
+                    <thead class="table-dark sticky-header">
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Código</th>
+                        <th scope="col">Descripción del Producto</th>
+                        <th scope="col">Cantidad</th>
+                        <th scope="col">Sub total</th>
+                        <!-- Nueva columna -->
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">01</th>
+                        <td>C000001</td>
+                        <td>BOTELLA AGUA CIELO 1L</td>
+                        <td>1</td>
+                        <td>S/3.00</td>
+                        <!-- Nuevo dato -->
+                      </tr>
+                      <tr>
+                        <th scope="row">02</th>
+                        <td>C000002</td>
+                        <td>LAPICEROS RECARGABLES</td>
+                        <td>2</td>
+                        <td>S/5.00</td>
+                        <!-- Nuevo dato -->
+                      </tr>
+                      <tr>
+                        <th scope="row">03</th>
+                        <td>C000003</td>
+                        <td>INFLADOR DE GLOBOS</td>
+                        <td>1</td>
+                        <td>S/15.00</td>
+                        <!-- Nuevo dato -->
+                      </tr>
+                      <tr>
+                        <th scope="row">04</th>
+                        <td>C000003</td>
+                        <td>INFLADOR DE GLOBOS</td>
+                        <td>1</td>
+                        <td>S/15.00</td>
+                        <!-- Nuevo dato -->
+                      </tr>
+                      <tr>
+                        <th scope="row">05</th>
+                        <td>C000003</td>
+                        <td>INFLADOR DE GLOBOS</td>
+                        <td>1</td>
+                        <td>S/15.00</td>
+                        <!-- Nuevo dato -->
+                      </tr>
+                      <tr>
+                        <th scope="row">06</th>
+                        <td>C000003</td>
+                        <td>INFLADOR DE GLOBOS</td>
+                        <td>1</td>
+                        <td>S/15.00</td>
+                        <!-- Nuevo dato -->
+                      </tr>
+                      <tr>
+                        <th scope="row">07</th>
+                        <td>C000003</td>
+                        <td>INFLADOR DE GLOBOS</td>
+                        <td>1</td>
+                        <td>S/15.00</td>
+                        <!-- Nuevo dato -->
+                      </tr>
+                      <tr>
+                        <th scope="row">08</th>
+                        <td>C000003</td>
+                        <td>INFLADOR DE GLOBOS</td>
+                        <td>1</td>
+                        <td>S/15.00</td>
+                        <!-- Nuevo dato -->
+                      </tr>
+                      <tr>
+                        <th scope="row">09</th>
+                        <td>C000003</td>
+                        <td>INFLADOR DE GLOBOS</td>
+                        <td>1</td>
+                        <td>S/15.00</td>
+                        <!-- Nuevo dato -->
+                      </tr>
+                      <tr>
+                        <th scope="row">10</th>
+                        <td>C000003</td>
+                        <td>INFLADOR DE GLOBOS</td>
+                        <td>1</td>
+                        <td>S/15.00</td>
+                        <!-- Nuevo dato -->
+                      </tr>
+                      <tr>
+                        <th scope="row">11</th>
+                        <td>C000003</td>
+                        <td>INFLADOR DE GLOBOS</td>
+                        <td>1</td>
+                        <td>S/15.00</td>
+                        <!-- Nuevo dato -->
+                      </tr>
+                      <tr>
+                        <th scope="row">12</th>
+                        <td>C000003</td>
+                        <td>INFLADOR DE GLOBOS</td>
+                        <td>1</td>
+                        <td>S/15.00</td>
+                        <!-- Nuevo dato -->
+                      </tr>
+                      <tr>
+                        <th scope="row">13</th>
+                        <td>C000003</td>
+                        <td>INFLADOR DE GLOBOS</td>
+                        <td>1</td>
+                        <td>S/15.00</td>
+                        <!-- Nuevo dato -->
+                      </tr>
+                      <tr>
+                        <th scope="row">14</th>
+                        <td>C000003</td>
+                        <td>INFLADOR DE GLOBOS</td>
+                        <td>1</td>
+                        <td>S/15.00</td>
+                        <!-- Nuevo dato -->
+                      </tr>
+                      <tr>
+                        <th scope="row">15</th>
+                        <td>C000003</td>
+                        <td>INFLADOR DE GLOBOS</td>
+                        <td>1</td>
+                        <td>S/15.00</td>
+                        <!-- Nuevo dato -->
+                      </tr>
+                      <tr>
+                        <th scope="row">16</th>
+                        <td>C000003</td>
+                        <td>INFLADOR DE GLOBOS</td>
+                        <td>1</td>
+                        <td>S/15.00</td>
+                        <!-- Nuevo dato -->
+                      </tr>
+                      <tr>
+                        <th scope="row">17</th>
+                        <td>C000003</td>
+                        <td>INFLADOR DE GLOBOS</td>
+                        <td>1</td>
+                        <td>S/15.00</td>
+                        <!-- Nuevo dato -->
+                      </tr>
+                      <tr>
+                        <th scope="row">18</th>
+                        <td>C000003</td>
+                        <td>INFLADOR DE GLOBOS</td>
+                        <td>1</td>
+                        <td>S/15.00</td>
+                        <!-- Nuevo dato -->
+                      </tr>
+                      <tr>
+                        <th scope="row">19</th>
+                        <td>C000003</td>
+                        <td>INFLADOR DE GLOBOS</td>
+                        <td>1</td>
+                        <td>S/15.00</td>
+                        <!-- Nuevo dato -->
+                      </tr>
+                      <tr>
+                        <th scope="row">20</th>
+                        <td>C000003</td>
+                        <td>INFLADOR DE GLOBOS</td>
+                        <td>1</td>
+                        <td>S/15.00</td>
+                        <!-- Nuevo dato -->
+                      </tr>
+                      <!-- ESPACIO PARA AGREGAR MÁS DATOS -->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- TARJETA VENTAS POR MESES -->
+        <div class="col">
+          <div class="card h-100 border-0">
+            <div
+              class="card border-dark mb-3 d-flex flex-fill"
+              id="card-stockbajo"
+            >
+              <div class="card-header"><h5>Ventas por meses</h5></div>
+              <div class="card-body text-dark">
+                <div class="container" style="max-height: 400px">
+                  <canvas id="myChart"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTENEDOR CON 3 TARJETAS: MAYOR GASTO, MAS VENDIDOS Y PRODUCTOS BAJOS -->
+    <div
+      class="container-fluid text-center"
+      id="contenedor-tablasmayoryproductos"
+    >
+      <div class="row mx-4">
+        <div class="col">
+          <!-- TARJETA MAYOR GASTO -->
+          <div class="card h-100 border-0">
+            <div
+              class="card border-dark mb-3 d-flex flex-fill"
+              id="card-clientesmayorgasto"
+            >
+              <div class="card-header"><h5>Clientes con mayor gasto:</h5></div>
+              <div class="card-body text-dark">
+                <div
+                  class="table-responsive"
+                  style="max-height: 400px; overflow-y: auto"
+                >
+                  <table class="table table-striped table-hover">
+                    <thead class="table-dark sticky-header">
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">DNI</th>
+                        <th scope="col">Nombres</th>
+                        <th scope="col">Apellidos</th>
+                        <th scope="col">Consumo</th>
+                        <!-- Nueva columna -->
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>12345678</td>
+                        <td>Juan</td>
+                        <td>Pérez</td>
+                        <td>S/ 250.00</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>98765432</td>
+                        <td>María</td>
+                        <td>López</td>
+                        <td>S/ 180.50</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>54321678</td>
+                        <td>Pedro</td>
+                        <td>Gómez</td>
+                        <td>S/ 320.75</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">4</th>
+                        <td>87654321</td>
+                        <td>Sofía</td>
+                        <td>Rodríguez</td>
+                        <td>S/ 150.20</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">5</th>
+                        <td>98761234</td>
+                        <td>Ana</td>
+                        <td>Martínez</td>
+                        <td>S/ 420.90</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">6</th>
+                        <td>34561278</td>
+                        <td>Pablo</td>
+                        <td>Hernández</td>
+                        <td>S/ 275.30</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">7</th>
+                        <td>87654321</td>
+                        <td>Carolina</td>
+                        <td>García</td>
+                        <td>S/ 198.60</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">8</th>
+                        <td>23456781</td>
+                        <td>Luis</td>
+                        <td>Fernández</td>
+                        <td>S/ 305.40</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">9</th>
+                        <td>87654321</td>
+                        <td>Ana</td>
+                        <td>Ruiz</td>
+                        <td>S/ 120.75</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">10</th>
+                        <td>87654321</td>
+                        <td>Javier</td>
+                        <td>Gutiérrez</td>
+                        <td>S/ 285.90</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <!-- TARJETA MAS VENDIDOS GASTO -->
+          <div class="card h-100 border-0">
+            <div
+              class="card border-dark mb-3 d-flex flex-fill"
+              id="card-productosmasvendidos"
+            >
+              <div class="card-header"><h5>Productos más vendidos:</h5></div>
+              <div class="card-body text-dark">
+                <div
+                  class="table-responsive"
+                  style="max-height: 400px; overflow-y: auto"
+                >
+                  <table class="table table-striped table-hover">
+                    <thead class="table-dark sticky-header">
                       <tr>
                         <th scope="col">#</th>
                         <th scope="col">Código</th>
@@ -293,18 +494,22 @@
           </div>
         </div>
         <div class="col">
-          <div class="card h-100">
+          <!-- TARJETA PRODUCTOS BAJOS -->
+          <div class="card h-100 border-0">
             <div
               class="card border-dark mb-3 d-flex flex-fill"
               id="card-stockbajo"
             >
               <div class="card-header text-bg-danger">
-                Productos con stock bajo:
+                <h5>Productos con stock bajo:</h5>
               </div>
               <div class="card-body text-dark">
-                <div class="table-responsive">
+                <div
+                  class="table-responsive"
+                  style="max-height: 400px; overflow-y: auto"
+                >
                   <table class="table table-hover">
-                    <thead class="table-danger">
+                    <thead class="table-danger sticky-header">
                       <tr>
                         <th scope="col">#</th>
                         <th scope="col">Código</th>
@@ -339,10 +544,87 @@
 
                         <!-- Nuevo dato -->
                       </tr>
+                      <tr>
+                        <th scope="row">04</th>
+                        <td>C000003</td>
+                        <td>INFLADOR DE GLOBOS</td>
+                        <td>1</td>
+
+                        <!-- Nuevo dato -->
+                      </tr>
+                      <tr>
+                        <th scope="row">05</th>
+                        <td>C000003</td>
+                        <td>INFLADOR DE GLOBOS</td>
+                        <td>1</td>
+
+                        <!-- Nuevo dato -->
+                      </tr>
+                      <tr>
+                        <th scope="row">06</th>
+                        <td>C000003</td>
+                        <td>INFLADOR DE GLOBOS</td>
+                        <td>1</td>
+
+                        <!-- Nuevo dato -->
+                      </tr>
+                      <tr>
+                        <th scope="row">07</th>
+                        <td>C000003</td>
+                        <td>INFLADOR DE GLOBOS</td>
+                        <td>1</td>
+
+                        <!-- Nuevo dato -->
+                      </tr>
+                      <tr>
+                        <th scope="row">08</th>
+                        <td>C000003</td>
+                        <td>INFLADOR DE GLOBOS</td>
+                        <td>1</td>
+
+                        <!-- Nuevo dato -->
+                      </tr>
+                      <tr>
+                        <th scope="row">09</th>
+                        <td>C000003</td>
+                        <td>INFLADOR DE GLOBOS</td>
+                        <td>1</td>
+
+                        <!-- Nuevo dato -->
+                      </tr>
+                      <tr>
+                        <th scope="row">10</th>
+                        <td>C000003</td>
+                        <td>INFLADOR DE GLOBOS</td>
+                        <td>1</td>
+
+                        <!-- Nuevo dato -->
+                      </tr>
+                      <tr>
+                        <th scope="row">11</th>
+                        <td>C000003</td>
+                        <td>INFLADOR DE GLOBOS</td>
+                        <td>1</td>
+
+                        <!-- Nuevo dato -->
+                      </tr>
+                      <tr>
+                        <th scope="row">12</th>
+                        <td>C000003</td>
+                        <td>INFLADOR DE GLOBOS</td>
+                        <td>1</td>
+
+                        <!-- Nuevo dato -->
+                      </tr>
                       <!-- Agrega más filas y datos según sea necesario -->
                     </tbody>
                   </table>
                 </div>
+              </div>
+              <div class="card-footer">
+                <small class="text-body-secondary"
+                  >Last updated 3 mins ago</small
+                >
               </div>
             </div>
           </div>
@@ -350,6 +632,7 @@
       </div>
     </div>
 
+    <script src="chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
