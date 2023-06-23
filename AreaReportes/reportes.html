@@ -16,6 +16,7 @@
   </head>
 
   <body>
+    <!--PRIMERAS 4 TARJETAS: LOGO, ICONO, VENTASDIA Y VENTASMES-->
     <div class="row row-cols-2 row-cols-lg-5 g-3" id="tarjetas+iconos">
       <!-- COLUMNA ICONO DE AREA -->
       <div class="col-lg-2 order-lg-3">
@@ -115,9 +116,9 @@
       class="container-fluid text-center"
       id="contenedor-tablasventasygrafico"
     >
-      <div class="row mx-4">
+      <div class="row">
         <!--TARJETA VENTAS DEL DIA-->
-        <div class="col">
+        <div class="col col-sm col-md-6">
           <div class="card h-100 border-0">
             <div
               class="card border-dark mb-3 d-flex flex-fill"
@@ -317,7 +318,9 @@
               id="card-stockbajo"
             >
               <div class="card-header"><h5>Ventas por meses</h5></div>
-              <div class="card-body text-dark">
+              <div
+                class="card-body text-dark d-flex justify-content-center align-items-center"
+              >
                 <div class="container" style="max-height: 400px">
                   <canvas id="myChart"></canvas>
                 </div>
@@ -333,7 +336,7 @@
       class="container-fluid text-center"
       id="contenedor-tablasmayoryproductos"
     >
-      <div class="row mx-4">
+      <div class="row">
         <div class="col">
           <!-- TARJETA MAYOR GASTO -->
           <div class="card h-100 border-0">
@@ -495,7 +498,7 @@
         </div>
         <div class="col">
           <!-- TARJETA PRODUCTOS BAJOS -->
-          <div class="card h-100 border-0">
+          <div class="card h-80 border-0">
             <div
               class="card border-dark mb-3 d-flex flex-fill"
               id="card-stockbajo"
@@ -506,7 +509,7 @@
               <div class="card-body text-dark">
                 <div
                   class="table-responsive"
-                  style="max-height: 400px; overflow-y: auto"
+                  style="max-height: 350px; overflow-y: auto"
                 >
                   <table class="table table-hover">
                     <thead class="table-danger sticky-header">
@@ -621,10 +624,24 @@
                   </table>
                 </div>
               </div>
-              <div class="card-footer">
-                <small class="text-body-secondary"
-                  >Last updated 3 mins ago</small
-                >
+            </div>
+          </div>
+          <!-- TARJETA REGRESAR A MENU PRINCIPAL -->
+          <div class="card h-20 mb-3">
+            <div class="row g-0">
+              <div class="col-4">
+                <img
+                  src="/AreaReportes/Volver.png"
+                  class="img-fluid rounded-start"
+                  alt="Icono para volver al menú principal"
+                />
+              </div>
+              <div class="col-8">
+                <div class="card-body">
+                  <h6 class="card-title text-center">
+                    Regresar al menú principal
+                  </h6>
+                </div>
               </div>
             </div>
           </div>

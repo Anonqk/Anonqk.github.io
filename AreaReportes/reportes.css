@@ -4,7 +4,7 @@
 }
 
 div#tarjetas\+iconos {
-  margin: 1rem;
+  margin: 0.3rem;
 }
 div#contenedor-tarjetapestañas-tablas\+ventasdiaymes {
   margin: 1rem;
@@ -17,4 +17,11 @@ a.nav-link {
   top: 0;
   z-index: 1;
   background-color: #fff;
+}
+
+@media (max-width: 992px) {
+  /* Mobile L and below */
+  #card-stockbajo .container {
+    min-height: 400px;
+  }
 }
