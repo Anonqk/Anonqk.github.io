@@ -4,134 +4,151 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=EDGE">
     <meta name="viewport" content="initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Registro_de_Clientes</title>
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"/>
+  
 <style type="text/css" id="operaUserStyle"></style></head>
 <body>
-  <div class="contenido">
-    <div class="Titulo" style=""> Area de Inventario </div>
-    <div class="franja"></div>
-        <div class="CajaTexto">
-            <div class="NombreProducto" style="
-    display: flex;
-    gap: 60px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 40px;
-    line-height: 42px;
-    color: #000000;
-">
-                <label>Nombre del Producto:   </label> <input type="text" class="txtNombreProducto">     
+    <div class="contenido">
+        <div class="row m-2">
+            <div class="col-md-6">
+                <h1 class="mt-4 mb-0">Area de Inventario</h1>
             </div>
-
-            <div class="Precio_Stock">
-                <label>Precio: </label> <input type="text" class="txtPrecio"> <label>Stock: </label> <input type="text" class="txtStock">                       
+            <div class="col-md-6 text-right">
+                <div class="Logo">
+                    <img src="Imagen.png" alt="Logo" style="position: absolute; top: 0; right: 0;">
+                </div>
             </div>
-
-</div>
-    	<div class="Botones">    
-     		<button type="button" class="REGISTRAR">
-                <label for="textoCaja">REGISTRAR</label>
-                <img src="Registrar.png" alt="img Registrar">
-            </button>
-            <button type="button" class="EDITAR">
-                <label for="textoCaja">EDITAR</label>
-                <img src="Editar.png" alt="img Editar">
-            </button>
-            <button type="button" class="LIMPIAR">
-                <label for="textoCaja">LIMPIAR</label>
-                <img src="Limpiar.png" alt="img Limpiar">
-             </button>
-            <button type="button" class="CANCELAR">
-                <label for="textoCaja">CANCELAR</label>
-                <img src="Cancelar.png" alt="img Cancelar">
-            </button>
-    <button type="button" class="Volver">
-            <label for="textoCaja">Volver</label>
-                <img src="Volver.png" alt="img Volver">
-        </button>
-            
-     </div><div class="BuscarProducto">
-                <input type="text" placeholder="BUSCAR PRODUCTO O CODIGO" class="txtBuscarCliente">
-
-                <input type="image" src="Buscar.png" class="imgBuscar">                             
-                
+        </div>
     </div>
-
     
-    <table id="miTabla">
-        <thead>
+    
+
+    <div class="franja">
+        <hr class="m-2 mt-4 mb-4" style="border: none; border-top: 8px solid black; width: 95%;">
+    </div>
+   
+  <div class="txt">
+        <div class="row m-2">
+            <div class="col m-4">
+                <img
+                 class="inventario-icon"
+                src="imagen_Inventario.png"
+                 alt="Icono de inventario" />
+            </div>
+            <div class="col-md-10">
+                <div class="row m-3">
+                    <div class="col-md-8">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="txtNombreProducto">Nombre del Producto:</span>
+                            <input type="text" class="form-control text-xs">
+                        </div>
+                    </div>
+                </div>
+                <div class="row m-3">
+                    <div class="col-md-4">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="txtPrecio">Precio:</span>
+                            <input type="text" class="form-control" text-xs>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="txtStock">Stock:</span>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="Botones row m-2 justify-content-center">
+        <div class="col-md-2">
+            <div class="btn-group d-flex" role="group">
+                <button type="button" class="btn btn-success btn-block">
+                    <label for="textoCaja">REGISTRAR</label>
+                    <img src="Registrar.png" alt="img Registrar">
+                </button>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="btn-group d-flex" role="group">
+                <button type="button" class="btn btn-warning btn-block">
+                    <label for="textoCaja">EDITAR</label>
+                    <img src="Editar.png" alt="img Editar">
+                </button>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="btn-group d-flex" role="group">
+                <button type="button" class="btn btn-secondary btn-block">
+                    <label for="textoCaja">LIMPIAR</label>
+                    <img src="Limpiar.png" alt="img Limpiar">
+                </button>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="btn-group d-flex" role="group">
+                <button type="button" class="btn btn-danger btn-block">
+                    <label for="textoCaja">CANCELAR</label>
+                    <img src="Cancelar.png" alt="img Cancelar">
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="BuscarProducto">
+        <div class="input-group">
+            <input type="text" placeholder="BUSCAR PRODUCTO O CODIGO" class="form-control">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button">
+                    <img src="Buscar.png" alt="Buscar" class="imgBuscar">
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <table class="table table-hover">
+        <thead class="table-dark">
             <tr>
-                <th>Código</th>
-                <th>Nombre Producto</th>
-                <th>Stock</th>
-                <th>Precio</th>
-             
+                <th scope="col">Codigo</th>
+                <th scope="col">Nombre Producto</th>
+                <th scope="col">Stock</th>
+                <th scope="col">Precio</th>
             </tr>
-         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-         
-         </tr>
-         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-           
-         </tr>
-         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-           
-         </tr>
-         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-           
-         </tr>
-         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-           
-         </tr>
-         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            
-         </tr>
-         
         </thead>
-
+        <tbody>
+            <tr>
+                <th scope="row">001</th>
+                <td>Lapiz</td>
+                <td>10</td>
+                <td>1.50</td>
+            </tr>
+            <tr>
+                <th scope="row">0</th>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th scope="row">0</th>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th scope="row">0</th>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th scope="row">0</th>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
     </table>
-
-    </div>
-        <div class="Imagenes">
-    <div class="Logo" style="
-    position: absolute;
-    top: -0.5%;
-    right: 9%;
-    ">
-     <img src="Imagen.png">
-    </div>
-    <div class="Icono" style="
-    position: absolute;
-    top: 14.5%;
-    right: 84%;
-">
-    <img src="imagen_Inventario.png">
-</div></div>
-    </div>
-        
+  
 </body></html>
