@@ -1,223 +1,88 @@
+html,
+body {
+  font-family: "Roboto";
+}
+
 .Franja {
-    height: 7px;
-    background-color: black;
+  height: 7px;
+  background-color: black;
 }
 
 .Cabecera {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
 }
 
 .Titulo {
-    display: flex;
-    font-family: 'Inter';
-    font-style: normal;
-    align-items: flex-end;
+  display: flex;
+  font-family: "Roboto";
+  font-style: normal;
+  align-items: flex-end;
 }
 
 .CajasTexto {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-
-.Nombre_Apellidos {
-    display: flex;
-    justify-content: space-around;
-    gap: 10px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-size: 35px;
-    color: #000000;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.DNI_Telefono {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-size: 35px;
-    color: #000000;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.Nombre {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    justify-content: flex-start;
-}
-.Apellidos {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.DNI {
-    display: flex;
-    align-items: center;
-    gap: 60px;
-    justify-content: space-around;
-}
-
-.Telefono {
-    display: flex;
-    align-items: center;
-    gap: 21px;
-    justify-content: flex-start;
-}
-
-.Botones {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-    gap: 15px;
-}
-
-button.REGISTRAR {
-    overflow: hidden;
-    width: 120%;
-    height: 55px;
-    background: #92D6AA;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 21px;
-    flex-direction: row-reverse;
-    justify-content: space-around;
-    align-content: center;
-    flex-wrap: nowrap;
-}
-
-button.EDITAR {
-    overflow: auto;
-    width: 120%;
-    height: 55px;
-    background: #E8FD65;
-    box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 15px;
-    display: flex;
-    justify-content: space-around;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 21px;
-    line-height: 25px;
-    flex-direction: row-reverse;
-    align-items: center;
-}
-
-button.LIMPIAR {
-    width: 120%;
-    height: 55px;
-    background: #D0DDE0;
-    opacity: 85%;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 21px;
-    line-height: 25px;
-    text-align: center;
-    color: #2D2F2F;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    flex-direction: row-reverse;
-    overflow: hidden;
-}
-
-button.CANCELAR {
-    width: 120%;
-    height: 55px;
-    background: #FF8588;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 21px;
-    line-height: 25px;
-    text-align: center;
-    color: #810606;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    flex-direction: row-reverse;
-    overflow: hidden;
-}
 .Volver {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 button.Volver {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 21px;
-    line-height: 25px;
-    text-align: center;
-    color: #000000;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-    display: flex;
-    align-items: center;
-    background: none;
-    border: none;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 25px;
+  text-align: center;
+  color: #000000;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
 }
 
 .BarraBuscar {
-    width: -webkit-fill-available;
-    border-width: 3px 3px 0px 3px;
-    border-style: solid;
-    border-radius: 0px;
+  width: -webkit-fill-available;
+  border-width: 3px 3px 0px 3px;
+  border-style: solid;
+  border-radius: 0px;
 }
 .BuscarCliente {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .ImgBuscar {
-    display: flex;
-    width: initial;
-    border-width: 3px 3px 0px 0px;
-    border-style: solid;
-    border-radius: 0px;
+  display: flex;
+  width: initial;
+  border-width: 3px 3px 0px 0px;
+  border-style: solid;
+  border-radius: 0px;
 }
 
 .Tabla {
-    border-width: 3px 3px 3px 3px;
-    border: 3px solid #000000;
-    font-size: 22px;
-    font-style: normal;
-    overflow: auto;
+  border-width: 3px 3px 3px 3px;
+  border: 3px solid #000000;
+  font-size: 22px;
+  font-style: normal;
+  overflow: auto;
 }
-
 
 th,
 td {
-    border: 1px solid black;
+  border: 1px solid black;
   border-collapse: collapse;
   text-align: center;
   justify-content: center;
   padding: 5px;
-
 }
 th,
 td {
@@ -226,13 +91,102 @@ td {
 }
 
 @keyframes typing {
-    from {
-        width: 0;
-    }
+  from {
+    width: 0;
+  }
 }
 
 @keyframes blink {
-    50% {
-        border-color: transparent;
-    }
+  50% {
+    border-color: transparent;
+  }
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 1rem;
+}
+
+.button-container button {
+  width: 100%;
+}
+button#btn-registrar {
+  overflow: hidden;
+
+  height: 55px;
+  background: #92d6aa;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25),
+    0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 21px;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-content: center;
+  flex-wrap: nowrap;
+}
+button#btn-editar {
+  overflow: auto;
+
+  height: 55px;
+  background: #e8fd65;
+
+  box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-around;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 25px;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+button#btn-eliminar {
+  height: 55px;
+  background: #d0dde0;
+  opacity: 85%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25),
+    0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 25px;
+  text-align: center;
+  color: #2d2f2f;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  flex-direction: row-reverse;
+  overflow: hidden;
+}
+button#btn-cancelar {
+  height: 55px;
+  background: #ff8588;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25),
+    0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 25px;
+  text-align: center;
+  color: #810606;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  flex-direction: row-reverse;
+  overflow: hidden;
 }
