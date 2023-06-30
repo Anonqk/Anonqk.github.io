@@ -27,41 +27,48 @@
         <hr class="m-2 mt-4 mb-4" style="border: none; border-top: 8px solid black; width: 95%;">
     </div>
    
-  <div class="txt">
+    <style>
+        .form-control {
+            border-color: #333333;
+        }
+    </style>
+    
+    <div class="txt">
         <div class="row m-2">
             <div class="col m-4">
-                <img
-                 class="inventario-icon"
-                src="imagen_Inventario.png"
-                 alt="Icono de inventario" />
+                <img class="inventario-icon" src="imagen_Inventario.png" alt="Icono de inventario" />
             </div>
             <div class="col-md-10">
                 <div class="row m-3">
                     <div class="col-md-8">
-                        <div class="input-group mb-3">
-                            <span class="input-group-text" id="txtNombreProducto">Nombre del Producto:</span>
-                            <input type="text" class="form-control text-xs">
+                        <div class="form-group form-inline">
+                            <label for="txtNombreProducto">Nombre del Producto:</label>
+                            <input type="text" class="form-control" id="txtNombreProducto">
                         </div>
                     </div>
                 </div>
                 <div class="row m-3">
                     <div class="col-md-4">
-                        <div class="input-group mb-3">
-                            <span class="input-group-text" id="txtPrecio">Precio:</span>
-                            <input type="text" class="form-control" text-xs>
+                        <div class="form-group form-inline">
+                            <label for="txtPrecio">Precio:</label>
+                            <input type="text" class="form-control" id="txtPrecio">
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="input-group mb-3">
-                            <span class="input-group-text" id="txtStock">Stock:</span>
-                            <input type="text" class="form-control">
+                        <div class="form-group form-inline">
+                            <label for="txtStock">Stock:</label>
+                            <input type="text" class="form-control" id="txtStock">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
+    
+    
+    
+    
+    
     <div class="Botones row m-2 justify-content-center">
         <div class="col-md-2">
             <div class="btn-group d-flex" role="group">
@@ -108,7 +115,7 @@
         </div>
     </div>
 
-    <table class="table table-hover">
+    <table class="table table-striped table-hover">
         <thead class="table-dark">
             <tr>
                 <th scope="col">Codigo</th>
@@ -118,7 +125,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
+            <tr class="">
                 <th scope="row">001</th>
                 <td>Lapiz</td>
                 <td>10</td>
@@ -130,7 +137,7 @@
                 <td></td>
                 <td></td>
             </tr>
-            <tr>
+            <tr class="">
                 <th scope="row">0</th>
                 <td></td>
                 <td></td>
@@ -142,7 +149,7 @@
                 <td></td>
                 <td></td>
             </tr>
-            <tr>
+            <tr class="">
                 <th scope="row">0</th>
                 <td></td>
                 <td></td>
@@ -150,5 +157,6 @@
             </tr>
         </tbody>
     </table>
-  
+    
+    
 </body></html>
