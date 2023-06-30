@@ -89,6 +89,12 @@ td {
   width: 27px;
   height: 37px;
 }
+.sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #fff;
+}
 
 @keyframes typing {
   from {
