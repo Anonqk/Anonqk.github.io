@@ -72,7 +72,7 @@ body {
 .edicion-logo span {
     width: 584.34px;
     height: 42px;
-    font-family: 'Inter';
+    font-family: Roboto;
     font-style: normal;
     font-weight: 400;
     font-size: 35px;
@@ -146,25 +146,26 @@ body {
     gap: 140px;
     background: #FFFFFF;
 }
-.caja-inferior button{
-    width: 305px;
-height: 62px;
-display: flex;
-justify-content: center;
-align-items: center;
-gap: 55px;
+.caja-inferior button {
+  width: 305px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 55px;
+  font-size: 21px;
+  font-family: Roboto;
+  font-weight: 500;
 }
-.guardar{
-    background: #92D6AA;
-box-shadow: 0px 4px 4px rgba(49, 247, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 15px;
-border-color: #92D6AA; 
-}   
-.eliminar{
-    background: #FF8588;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 15px;
-    border-color: #FF8588;
+.guardar {
+  background: #92D6AA;
+  box-shadow: 0px 4px 4px rgba(49, 247, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+}  
+.eliminar {
+  background: #FF8588;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
 }
 /**/
 .caja-inferior-derecha{

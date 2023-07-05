@@ -118,6 +118,11 @@ td {
 .button-container button {
   width: 100%;
 }
+
+.container {
+  font-family: Roboto;
+}
+
 button#btn-registrar {
   overflow: hidden;
 

@@ -23,6 +23,7 @@ body {
     max-width: 500px;
     margin-top: auto;
     margin-bottom: auto;
+    font-family: Roboto;
 }
 
 .logo img {
@@ -76,6 +77,7 @@ button {
     font-weight: 600;
     font-size: 20px;
     margin: 0 auto;
+    font-family: Roboto;
 }
 
 button:hover {

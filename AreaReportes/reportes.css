@@ -20,5 +20,17 @@ a.nav-link {
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: Roboto;
+}
+
+div#tarjetas\+iconos {
+  font-family: Roboto;
+}
+
+div#contenedor-tablasventasygrafico {
+  font-family: Roboto;
+}
+
+div#contenedor-tablasmayoryproductos {
+  font-family: Roboto;
 }

@@ -49,11 +49,16 @@ button.Volver {
   border: none;
 }
 
+.row.m-2 {
+  font-family: Roboto;
+}
+
 .BarraBuscar {
   width: -webkit-fill-available;
   border-width: 3px 3px 0px 3px;
   border-style: solid;
   border-radius: 0px;
+  font-family: Roboto;
 }
 .BuscarProducto {
   display: flex;
@@ -195,4 +200,9 @@ button#btn-cancelar {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   flex-direction: row-reverse;
   overflow: hidden;
+}
+
+label {
+  display: inline-block;
+  font-family: Roboto;
 }
