@@ -14,6 +14,7 @@ firebase.initializeApp(firebaseConfig);
 // Obtiene las referencias a los servicios de autenticación y base de datos de Firebase
 var auth = firebase.auth();
 var database = firebase.database();
+var uid = localStorage.getItem("uid");
 
 document.addEventListener("DOMContentLoaded", function () {
   var btnRegistrar = document.getElementById("btn-registrar");
@@ -53,10 +54,33 @@ function validateForm(event) {
       cellApellidos.innerHTML = apellidos;
       cellDNI.innerHTML = dni;
       cellTelefono.innerHTML = telefono;
+
+      // Obtener la referencia al nodo "clientes" del usuario actual
+      var currentUserClientsRef = database.ref("Usuarios/" + uid + "/Clientes");
+
+      // Generar un nuevo ID para el cliente
+      var newClientRef = currentUserClientsRef.push();
+
+      // Guardar los datos del cliente en la base de datos
+      newClientRef
+        .set({
+          Nombre: nombre,
+          Apellido: apellidos,
+          DNI: dni,
+          Telefono: telefono,
+        })
+        .then(function () {
+          console.log("Cliente guardado exitosamente en la base de datos");
+        })
+        .catch(function (error) {
+          console.log(
+            "Error al guardar el cliente en la base de datos:",
+            error
+          );
+        });
+
       // Borrar el contenido de los inputs
       form.reset();
-
-      //FALTA HACER QUE SE GUARDEN EN LA BASE DE DATOS
     }
   });
 }
