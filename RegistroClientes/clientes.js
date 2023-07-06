@@ -1,3 +1,20 @@
+// Your web app's Firebase configuration
+var firebaseConfig = {
+  apiKey: "AIzaSyDrzCRyT3S-SY7Vvh58jkPtstVSLMvsStQ",
+  authDomain: "gestorinventarios-e37f6.firebaseapp.com",
+  databaseURL: "https://gestorinventarios-e37f6-default-rtdb.firebaseio.com",
+  projectId: "gestorinventarios-e37f6",
+  storageBucket: "gestorinventarios-e37f6.appspot.com",
+  messagingSenderId: "968579423727",
+  appId: "1:968579423727:web:04d75d7fda53cfd8086a1a",
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+// Obtiene las referencias a los servicios de autenticación y base de datos de Firebase
+var auth = firebase.auth();
+var database = firebase.database();
+
 document.addEventListener("DOMContentLoaded", function () {
   var btnRegistrar = document.getElementById("btn-registrar");
   btnRegistrar.addEventListener("click", function (event) {
@@ -14,12 +31,32 @@ function validateForm(event) {
     if (form.checkValidity() === false) {
       form.classList.add("was-validated");
     } else {
-      /*
+      // Obtener los valores ingresados en el formulario
+      var nombre = form.querySelector("#validationCustom01").value;
+      var apellidos = form.querySelector("#validationCustom02").value;
+      var dni = form.querySelector("#validationCustom03").value;
+      var telefono = form.querySelector("#validationCustom04").value;
 
-        ACA SE AÑADEN LAS ACCIONES CON LA BASE DE DATOS
+      // Crear una nueva fila en la tabla
+      var tablaBody = document.getElementById("tablaBodyClientes");
+      var newRow = tablaBody.insertRow();
 
-        */
-      console.log("Formulario válido.");
+      // Insertar las celdas con los valores ingresados
+      var cellNumero = newRow.insertCell();
+      var cellNombre = newRow.insertCell();
+      var cellApellidos = newRow.insertCell();
+      var cellDNI = newRow.insertCell();
+      var cellTelefono = newRow.insertCell();
+
+      cellNumero.innerHTML = tablaBody.rows.length; // Número de fila
+      cellNombre.innerHTML = nombre;
+      cellApellidos.innerHTML = apellidos;
+      cellDNI.innerHTML = dni;
+      cellTelefono.innerHTML = telefono;
+      // Borrar el contenido de los inputs
+      form.reset();
+
+      //FALTA HACER QUE SE GUARDEN EN LA BASE DE DATOS
     }
   });
 }
