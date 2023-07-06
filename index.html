@@ -1,50 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Iniciar sesión</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="/logoECODAR.png">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/x-icon" href="/logoECODAR.png" />
+  </head>
+  <body>
     <div class="banner">
-        <h1>¡Bienvenido a ECODAR!</h1>
+      <h1>¡Bienvenido a ECODAR!</h1>
     </div>
 
     <div class="container">
-        <div class="logo">
-            <img src="logoECODAR.png" alt="Logo ECODAR">
+      <div class="logo">
+        <img src="logoECODAR.png" alt="Logo ECODAR" />
+      </div>
+
+      <form class="login-form">
+        <div class="form-group">
+          <input
+            type="text"
+            id="usuario"
+            name="usuario"
+            placeholder="Ingrese su Usuario"
+          />
+          <img src="userIcon.svg" class="icons" />
         </div>
 
-        <form class="login-form">
-            <div class="form-group">
-                <input type="text" id="usuario" name="usuario" placeholder="Ingrese su Usuario">
-                <img src="userIcon.svg" class="icons">
-            </div>
+        <div class="form-group">
+          <input
+            type="password"
+            id="contrasena"
+            name="contrasena"
+            placeholder="Ingrese su contraseña"
+          />
+          <img src="passwordIcon.svg" class="icons" />
+        </div>
 
-            <div class="form-group">
-                <input type="password" id="contrasena" name="contrasena" placeholder="Ingrese su contraseña">
-                <img src="passwordIcon.svg" class="icons">
-            </div>
+        <div class="password-msg">
+          <a href="https://youtu.be/OWodAv1KHaM">¿Olvidó su contraseña?</a>
+        </div>
 
-            <div class="password-msg">
-                <a href="https://youtu.be/OWodAv1KHaM">¿Olvidó su contraseña?</a>
-            </div>
+        <button type="button" id="login-btn">Iniciar Sesión</button>
 
-            <button type="button" id="login-btn">Iniciar Sesión</button>
-
-            <div class="register-msg">
-                ¿No está registrado?&nbsp;<a href="AreaRegistro/registro.html" class="register-link">Registrarse</a>
-            </div>
-        </form>
+        <div class="register-msg">
+          ¿No está registrado?&nbsp;<a
+            href="AreaRegistro/registro.html"
+            class="register-link"
+            >Registrarse</a
+          >
+        </div>
+      </form>
     </div>
 
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
     <script src="login.js"></script>
-</body>
-
+  </body>
 </html>
