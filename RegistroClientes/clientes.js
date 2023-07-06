@@ -27,6 +27,7 @@ function validateForm(event) {
   event.preventDefault();
   event.stopPropagation();
 
+  //VALIDACION DEL FORMULARIO
   var forms = document.getElementsByClassName("needs-validation");
   Array.prototype.filter.call(forms, function (form) {
     if (form.checkValidity() === false) {
@@ -41,6 +42,9 @@ function validateForm(event) {
       // Crear una nueva fila en la tabla
       var tablaBody = document.getElementById("tablaBodyClientes");
       var newRow = tablaBody.insertRow();
+
+      // Agregar la clase "selectable-row" a la fila
+      newRow.classList.add("selectable-row");
 
       // Insertar las celdas con los valores ingresados
       var cellNumero = newRow.insertCell();
@@ -84,3 +88,135 @@ function validateForm(event) {
     }
   });
 }
+
+//CARGA CLIENTE EN LA TABLA
+$(document).ready(function () {
+  // Obtiene una referencia al nodo de clientes en la base de datos
+  var clientesRef = database.ref("Usuarios/" + uid + "/Clientes");
+
+  // Carga los datos de los clientes y los muestra en la tabla
+  clientesRef.once("value", function (snapshot) {
+    var tablaBody = $("#tablaBodyClientes")[0];
+    var contador = 1;
+
+    snapshot.forEach(function (childSnapshot) {
+      var cliente = childSnapshot.val();
+
+      var row = tablaBody.insertRow();
+      row.classList.add("selectable-row"); // Agregar la clase "selectable-row" a la fila
+      row.setAttribute("data-dni", cliente.DNI);
+      row.setAttribute("data-key", childSnapshot.key);
+      var cellNumero = row.insertCell();
+      var cellNombres = row.insertCell();
+      var cellApellidos = row.insertCell();
+      var cellDNI = row.insertCell();
+      var cellTelefono = row.insertCell();
+
+      cellNumero.innerHTML = contador;
+      cellNombres.innerHTML = cliente.Nombre;
+      cellApellidos.innerHTML = cliente.Apellido;
+      cellDNI.innerHTML = cliente.DNI;
+      cellTelefono.innerHTML = cliente.Telefono;
+
+      contador++;
+    });
+  });
+});
+
+//FUNCION PARA editar clientes
+$(document).ready(function () {
+  // Variable para almacenar la fila seleccionada
+  var filaSeleccionada = null;
+
+  // Evento de clic en una fila
+  $("#tablaBodyClientes").on("click", "tr.selectable-row", function () {
+    // Desmarca todas las filas previamente seleccionadas
+    $("tr.selectable-row.selected").removeClass("selected");
+
+    // Marca la fila actual como seleccionada
+    $(this).addClass("selected");
+
+    // Cambia el color de fondo de la fila seleccionada
+    $(this).css("--bs-table-bg", "#e1dfff");
+
+    // Restablece el color de fondo de las demás filas
+    $("tr.selectable-row").not(this).css("--bs-table-bg", "");
+
+    // Almacena la fila seleccionada
+    filaSeleccionada = this;
+
+    // Obtener los datos de la fila seleccionada
+    var nombre = $(this).find("td:nth-child(2)").text();
+    var apellidos = $(this).find("td:nth-child(3)").text();
+    var dni = $(this).find("td:nth-child(4)").text();
+    var telefono = $(this).find("td:nth-child(5)").text();
+
+    // Cargar los datos en el formulario
+    $("#validationCustom01").val(nombre);
+    $("#validationCustom02").val(apellidos);
+    $("#validationCustom03").val(dni);
+    $("#validationCustom04").val(telefono);
+  });
+
+  // Evento de clic en el botón "Editar"
+  $("#btn-editar").on("click", function () {
+    // Verificar si hay una fila seleccionada
+    if (filaSeleccionada === null) {
+      alert("No se ha seleccionado ningún cliente");
+      return;
+    } else {
+      // Obtener los valores ingresados en el formulario
+      var nombre = $("#validationCustom01").val();
+      var apellidos = $("#validationCustom02").val();
+      var dni = $("#validationCustom03").val();
+      var telefono = $("#validationCustom04").val();
+
+      // Obtener el DNI seleccionado desde la fila seleccionada
+      var dniSeleccionado = $(filaSeleccionada).find("td:nth-child(4)").text();
+
+      // Buscar el cliente en el Realtime Database por su DNI
+      var clienteRef = database
+        .ref("Usuarios/" + uid + "/Clientes")
+        .orderByChild("DNI")
+        .equalTo(dniSeleccionado);
+
+      clienteRef.once("value", function (snapshot) {
+        snapshot.forEach(function (childSnapshot) {
+          var clienteKey = childSnapshot.key;
+
+          // Actualizar los datos del cliente con los valores del formulario
+          var updates = {};
+          updates["Usuarios/" + uid + "/Clientes/" + clienteKey + "/Nombre"] =
+            nombre;
+          updates["Usuarios/" + uid + "/Clientes/" + clienteKey + "/Apellido"] =
+            apellidos;
+          updates["Usuarios/" + uid + "/Clientes/" + clienteKey + "/DNI"] =
+            telefono;
+
+          updates["Usuarios/" + uid + "/Clientes/" + clienteKey + "/Telefono"] =
+            telefono;
+
+          // Ejecutar las actualizaciones en el Realtime Database
+          database
+            .ref()
+            .update(updates)
+            .then(function () {
+              alert("Edición exitosa");
+
+              // Actualizar los datos de la fila seleccionada en la tabla
+              $(filaSeleccionada).find("td:nth-child(2)").text(nombre);
+              $(filaSeleccionada).find("td:nth-child(3)").text(apellidos);
+              $(filaSeleccionada).find("td:nth-child(4)").text(dni);
+              $(filaSeleccionada).find("td:nth-child(5)").text(telefono);
+            })
+            .catch(function (error) {
+              console.log(
+                "Error al editar el cliente en la base de datos:",
+                error
+              );
+            });
+        });
+      });
+    }
+  });
+});
