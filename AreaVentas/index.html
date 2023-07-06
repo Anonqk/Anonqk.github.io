@@ -1,139 +1,228 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área de Ventas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
 </head>
 
 <body>
-    <div class="ventasContenier">
-        <main>
-            <form action="">
-
-                <div class="dni-buscar">
-                    <input type="text" placeholder="DNI:-" class="cajaEscribir" required>
-                    <button type="button" class="botonBuscar">
-                        
-                        <img src="buscar.png" alt="boton busar" class="iconBuscar">
-
-                    </button>
-                    <label for="Buscar" class="label-buscar"> Buscar</label>
-                </div>
-                <div class="productos-buscar">
-                    <input type="text" placeholder="PRODUCTOS:-" class="cajaEscribir">
-                    <button type="button" class="botonBuscar">
-                        <img src="buscar.png" alt="boton busar" class="iconBuscar">
-
-                    </button>
-                    <label for="Buscar" class="label-buscar"> Buscar</label>
-                </div>
-
-                <div class="logo"><img src="LOGOTI.PNG" alt="logo empresa"></div>
-                <div class="logo-tienda"><img src="ventas-marca.png" alt="logo de tienda"></div>
-                <div class="franja"></div>
-                <label for="AreaVentas" class="regClientes">Registro de Ventas</label>
-
-                
-                    <div class="div-cliente">
-                        <span class="span-abajo">Cliente: </span>
-                        <input type="text" class="cliente-input">
+    <div class="container">
+        <div class="row">
+            <div class="Cabecera">
+                <div class="col-sm-10 col-md-10 col-lg-10 col-xl-10">
+                    <div class="Titulo">
+                        <h1 class="titulo-ventas">Registro de Ventas</A></h1>
                     </div>
-                    <div class="div-total">
-                        <span class="span-abajo">Total: </span>
-                        <input type="text" class="total-input">
-                    </div>
-                
-
-                <div class="botonesEdicion">
-
-                    <button type="button" class="Añadir">
-                        <img src="Agreagar.png" alt="foto agregar"> 
-                        <label for="textoCaja" class="text-añadir">AÑADIR</label>
-                    </button>
-                    <button type="button" class="eliminar">
-                        <img src="eliminar.png" alt="foto eliminar">
-                        <label for="textoCaja" class="text-eliminar">ELIMINAR</label>
-                    </button>
-                    <button type="button" class="genBoleta">
-                        <img src="aprobar.png" alt="foto aprobar">
-                        <label for="textoCaja" class="text-boleta">BOLETA</label>
-                    </button>
-
                 </div>
-                <div class="retroceso">
-                    <span>Volver</span>
-                    <img src="retroceder.png" alt="icono de retroceder">
+                <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
+                <div class="Logo">
+                    <input type="image" src="LOGOTI.PNG" class="imgLogo" width="80px" height="70px" />
                 </div>
-
-                <table id="miTabla">
-                    <thead>
-                        <tr>
-                            <th>Código</th>
-                            <th>Nombre Producto</th>
-                            <th>Descripción</th>
-                            <th>Precio Unitario</th>
-                            <th>cantidad</th>
-                            <th>subtotal</th>
-                        </tr>
-                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                     </tr>
-                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                     </tr>
-                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                     </tr>
-                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                     </tr>
-                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                     </tr>
-                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                     </tr>
-                     
-                    </thead>
-
-                </table>
-            </form>
-        </main>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <div class="Franja"></div>
+            </div>
+        </div>
     </div>
+
+    <!--buscadores-->
+    <div class="container">
+        <div class="row">
+            <div class="CajasTexto">
+                <!--imagenes-->
+                <div class="col-sm-12 col-md-4 col-lg-2 col-xl-3">
+                    <img class="img-fluid" src="ventas-marca.png" width="150px" height="190px" />
+                </div>
+                <!-- buscadores-->
+                <div class="col-sm-12 col-md-8 col-lg-10 col-xl-9">
+                    <div class="container">
+                        <form class="needs-validation" novalidate>
+                            <div class="row">
+                                <div class="col-md-10" style="padding-bottom: 2rem">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="validationCustom01" required
+                                                placeholder="DNI:-" />
+                                            <div class="input-group-append">
+                                                <button class="btn btn-outline-secondary" type="button">
+                                                    <img src="buscar.png" alt="Buscar" class="img-fluid"
+                                                        style="width: 38px; height: 30px; ">
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-10" style="padding-bottom: 1rem">
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" id="validationCustom03" required
+                                                    placeholder="PRODUCTOS:-" />
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-outline-secondary" type="button">
+                                                        <img src="buscar.png" alt="Buscar" class="img-fluid"
+                                                            style="width: 38px; height: 30px; ">
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--botones-->
+    <div class="container">
+        <div class="row m-3">
+            <div class="col-md-6 col-lg-3">
+                <div class="button-container">
+                    <button class="btn btn border-black btn-block" id="btn-registrar">
+                        Registrar<img src="Agreagar.png" alt="img Registrar" />
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="button-container">
+                    <button class="btn btn-primary border-black btn-block" id="btn-boleta">
+                        Boleta<img src="aprobar.png" alt="img Limpiar" />
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="button-container">
+                    <button class="btn btn-primary border-black btn-block" id="btn-eliminar">
+                        Eliminar<img src="eliminar.png" alt="img Cancelar" />
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row m-2">
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            
+          </div>
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div
+              class="table-responsive border"
+              style="max-height: 400px; overflow-y: auto;"
+            >
+              <table class="table table-striped table-hover">
+                <thead class="table-dark sticky-header">
+                  <tr>
+                    <th>Codigo</th>
+                    <th>Nombre del Producto</th>
+                    <th>Descripción</th>
+                    <th>Precio Unitario</th>
+                    <th>Cantidad</th>
+                    <th>Subtotal</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                      <th scope="row">C001</th>
+                      <td>Lapiz</td>
+                      <td>Lapiz 2B</td>
+                      <td>S/3.00</td>
+                      <td>3</td>
+                      <td>S/9.00</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">C003</th>
+                      <td>Cuaderno</td>
+                      <td>Standford</td>
+                      <td>S/4.00</td>
+                      <td>2</td>
+                      <td>S/8.00</td>
+                    </tr>
+                    <th scope="row">C004</th>
+                    <td>Lapiz</td>
+                    <td>Lapiz 4B</td>
+                    <td>S/3.50</td>
+                    <td>3</td>
+                    <td>S/10.50</td>
+                    </tr> <tr>
+                        <th scope="row">C002</th>
+                        <td>Borrador</td>
+                        <td>Faber Castell</td>
+                        <td>S/1.00</td>
+                        <td>2</td>
+                        <td>S/2.00</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">C007</th>
+                        <td>Regla</td>
+                        <td>Artesco</td>
+                        <td>S/3.00</td>
+                        <td>1</td>
+                        <td>S/3.00</td>
+                    </tr><tr>
+                     
+                    </tr><tr>
+                      <th scope="row"></th>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr><tr>
+                        <th scope="row"></th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr><tr>
+                        <th scope="row"></th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr><tr>
+                        <th scope="row"></th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>                
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="Volver"><a
+            href="../MenuPrincipal/menuprincipal.html"
+            style="text-decoration: none; color: black; border-color: white;"
+            >
+            <button type="button" class="Volver">
+                Volver<img src="retroceder.png" alt="img Volver" />
+            </button>
+            </div>
+        </div>
+        </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

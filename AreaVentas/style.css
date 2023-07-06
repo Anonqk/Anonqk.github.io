@@ -1,260 +1,15 @@
 body {
-  background: #FFFFFF;
-}
-
-.ventasContenier {
-  left: 40px;
-  width: 1440px;
-  height: 1024px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-
-}
-
-/*div para buscar por DNI*/
-.dni-buscar {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 1103px;
-  height: 80px;
-
-  left: 10%;
-  top: 133px;
-
-  background: #FFFFFF;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 15px;
-}
-
-.label-buscar {
-
-  position: absolute;
-  width: 148px;
-  height: 21px;
-  left: 938px;
-  top: 57px;
-
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 23px;
-  text-align: center;
-
-  color: #224E7C;
-}
-
-/*botones para ambos buscar*/
-.botonBuscar {
-  position: relative;
-  left: -43px;
-  width: 42px;
-  height: 38px;
-  border: 1px solid #000000;
-  border-radius: 5px;
-  background-image: linear-gradient(160deg,
-      #2AFA23, #2EE6E3, #2AFA23);
-  transition: .3s;
-}
-
-.botonBuscar:active {
-  scale: 1.2;
-}
-
-/*la caja donde se escriben los datos*/
-.cajaEscribir {
-  position: relative;
-  width: 1004px;
-  height: 30px;
-
-  border: 1px solid #7E7474;
-  border-radius: 5px;
-}
-
-/*para ambos div*/
-.iconBuscar {
-  position: relative;
-  width: 38px;
-  height: 34px;
-  top: 1%;
-  left: -5.1px;
-  border-radius: 5px;
-}
-
-/*caja para buscar productos*/
-.productos-buscar {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 1103px;
-  height: 80px;
-
-  left: 10%;
-  top: 232px;
-  background: #FFFFFF;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 15px;
-
-}
-
-/*botones principales*/
-.botonesEdicion {
-  position: absolute;
-  flex-wrap: wrap;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-
-  width: 1119px;
-  height: 82px;
-  left: 8%;
-  top: 321px;
-}
-
-.Añadir:active,
-.genBoleta:active {
-  scale: 1.1;
-  background-image: linear-gradient(160deg,
-      #74a886, #92D6AA, #74a886);
-  transition: .3s;
-}
-
-.eliminar:active {
-  scale: 1.1;
-  background-image: linear-gradient(160deg,
-      #aa4649, #D0565A, #a13e41);
-  transition: .3s;
-}
-
-.Añadir {
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  width: 302px;
-  height: 57px;
-  flex-wrap: wrap;
-  border-color: #92D6AA;
-  background: #98D9AF;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 15px;
   font-family: 'Roboto';
 }
-
-.botonesEdicion img {
-  position: relative;
-  right: 50px;
-
-}
-
-.text-añadir,
-.text-boleta {
-  position: relative;
-  bottom: 20px;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 21px;
-  line-height: 25px;
-  color: #005C21;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.genBoleta {
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 305px;
-  height: 62px;
-  border-color: #92D6AA;
-  background: #98D9AF;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 15px;
-}
-
-.eliminar {
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 305px;
-  height: 62px;
-  border-color: #D0565A;
-  background: #D0565A;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 15px;
-}
-
-.text-eliminar {
-  position: relative;
-  bottom: 16px;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 21px;
-  line-height: 25px;
-  color: #612b2d;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-/*Logos*/
-.logo {
-  position: absolute;
-  width: 128px;
-  height: 96px;
-  /* left: 1244px; */
-  left: 56%;
-  top: 7px;
-  border-radius: 210px;
-}
-
-.logo-tienda {
-  position: absolute;
-  width: 188px;
-  height: 170px;
-  left: 1%;
-  top: 133px;
-
-  opacity: 0.93;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
-
-.franja {
-  position: absolute;
-  width: 1319px;
-  height: 8px;
-  /* left: 67px; */
-  left: 5.4%;
-  top: 114.17px;
-  background: #000000;
-}
-
-.regClientes {
-  position: absolute;
-  width: 364px;
-  height: 54px;
-  left: 9%;
-  top: 51px;
-
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 45px;
-  line-height: 54px;
-
+.titulo-ventas{
+  width: 310px;
   color: #000000;
   white-space: nowrap;
   border-right: 4px solid;
-  animation: typing 2s steps(100), blink .5s infinite step-end ;
+  animation: typing 2s steps(500), blink .5s infinite step-end ;
   overflow: hidden;
   transition: .5s;
 }
-
 @keyframes typing {
   from {
     width: 0;
@@ -266,79 +21,142 @@ body {
     border-color: transparent;
   }
 }
-
-
-/* inputs de abajooo*/
-
-.div-cliente {
-  position: absolute;
-  width: 659px;
-  height: 71px;
-  /* left: 434px; */
-  left: 20%;
-  /* top: 935px; */
-  top: 92%;
+.Cabecera {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.Franja {
+  height: 12px;
+  background-color: black;
+  position: relative;
+  overflow: hidden;
+  margin: 15px;
 }
 
-.div-total {
+.Franja:before {
+  content: "";
   position: absolute;
-
-  width: 276px;
-  height: 72px;
-  /* left: 1116px; */
-  left: 54%;
-  top: 92%;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: gray;
+  transition: width 0.5s;
 }
 
-.span-abajo {
-  position: absolute;
-  width: 161.36px;
-  height: 42px;
-  left: 26px;
-  /* left: 4%; */
-  top: 12px;
+.Franja:hover:before {
+  width: 100%;
+}
 
-  font-family: 'Inter';
+/**/
+.BarraBuscar {
+  width: -webkit-fill-available;
+  border-width: 3px 3px 0px 3px;
+  border-style: solid;
+  border-radius: 0px;
+  font-family: Roboto;
+  
+}
+
+.CajasTexto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.custom-input{
+  width: 20px;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 1rem;
+}
+
+.button-container button {
+  width: 100%;
+  
+}
+.row{
+  gap: 5px;
+}
+button#btn-registrar {
+  overflow: hidden;
+border-color: #98D9AF;
+  height: 55px;
+  background: #98D9AF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25),
+    0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  font-family: "Roboto";
   font-style: normal;
-  font-weight: 400;
-  font-size: 35px;
-  line-height: 42px;
-
-  color: #000000;
+  font-weight: 500;
+  font-size: 21px;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-content: center;
+  flex-wrap: nowrap;
+  color: #005C21;
+}
+button#btn-boleta {
+  height: 55px;
+  background: #98D9AF;
+  opacity: 85%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25),
+    0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 25px;
+  text-align: center;
+  color: #005C21;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  flex-direction: row-reverse;
+  overflow: hidden;
+}
+button#btn-registrar:active,
+button#btn-boleta:active {
+  scale: 1.1;
+  background-image: linear-gradient(160deg,
+      #74a886, #92D6AA, #74a886);
+  transition: .3s;
+}
+button#btn-eliminar {
+  height: 55px;
+  background: #D0565A;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25),
+    0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 25px;
+  text-align: center;
+  color: #810606;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  flex-direction: row-reverse;
+  overflow: hidden;
+}
+button#btn-eliminar:active {
+  scale: 1.1;
+  background-image: linear-gradient(160deg,
+      #aa4649, #D0565A, #a13e41);
+  transition: .3s;
 }
 
-.cliente-input {
-  box-sizing: border-box;
-
-  position: absolute;
-  width: 469px;
-  height: 51px;
-  left: 166px;
-
-  top: 7px;
-
-  border: 1px solid #000000;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  border-radius: 8px;
-}
-
-.total-input {
-  box-sizing: border-box;
-
-  position: absolute;
-  width: 138px;
-  height: 51px;
-  left: 127px;
-
-  top: 8px;
-
-  border: 1px solid #000000;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  border-radius: 8px;
-}
-
-/*tablas*/
-table,
 th,
 td {
   border: 1px solid black;
@@ -346,246 +164,29 @@ td {
   text-align: center;
   justify-content: center;
   padding: 5px;
-
 }
-
-table {
-  border-radius: 9px;
-  border: 1px solid #000000;
-  border-collapse: separate;
-
-  border-radius: 15px;
-  border-spacing: 0.2px;
-  position: absolute;
-
-  left: 5.5%;
-  top: 441px;
-  width: 1314px;
-
-  height: 400px;
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 17px;
-  line-height: 20px;
-}
-
 th,
 td {
-  width: 20px;
-  height: 30px;
+  width: 27px;
+  height: 37px;
 }
-
-th {
-  background-color: #E3E3E3;
+.Volver{
+  border-color: #ffffff;
+display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
-
-table tr:nth-child(odd) td {
-  background-color: #E3E3E3;
-
-}
-
-.retroceso {
-  position: absolute;
-  width: 128px;
-  height: 85px;
-  left: 5.5%;
-  top: 90%;
-}
-
-.retroceso span {
-  position: absolute;
-  width: 60px;
-  height: 25px;
-  left: 5.5%;
-  top: 80%;
-  font-family: 'Roboto';
+button.Volver {
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
   font-size: 21px;
   line-height: 25px;
+  text-align: center;
   color: #000000;
-}
-
-@media (max-width: 390px) {
-  
-  .body {
-    position: absolute;
-    width: 800px;
-    
-    max-height: 800px;
-    background: #FFFFFF;
-    border-radius: 15px;
-
-  }
-  .ventasContenier {
-    left: 40px;
-   width: 390px;
-    max-height: 800px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-  
-  }
-  .logo-tienda {
-    width: 75px;
-    height: 75px;
-    left: 54px;
-    top: 25px;
-  }
-
-  .logo {
-    width: 112px;
-    height: 84px;
-    left: 221px;
-    top: 17px;
-  }
-
-  .regClientes {
-    width: 180px;
-    height: 44px;
-    left: 27px;
-    top: 109px;
-    font-size: 22px;
-line-height: 26px;
-  }
-  .franja{
-    
-width: 330px;
-height: 10px;
-left: 18px;
-top: 133px;
-  }
-
-  .dni-buscar {
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    width: 351px;
-    height: 44px;
-    left: 17px;
-    top: 151px;
-
-    background: #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 15px;
-  }
-  .dni-buscar label,.productos-buscar label{display: none;}
-
-  .productos-buscar {
-    position: relative;
-    width: 351px;
-    height: 44px;
-    left: 17px;
-    top: 181px;
-
-    background: #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 15px;
-  }
-
-  .cajaEscribir {
-    left: 10px;
-  }
-
-  .botonBuscar {
-    left: -11px;
-  }
-
-  table {
-    position: relative;
-    left: -1px;
-    top: 230px;
-    width: 331px;
-    height: 314px;
-    padding: 1px;
-    font-size: 13.2px;
-    line-height: 10px;
-
-  }
-
-  th,
-  td {
-    width: 10px;
-    height: 0px;
-  }
-
-  .div-total {
-    position: absolute;
-    width: 146px;
-    height: 36px;
-    left: 102px;
-    top: 658px;
-
-  }
-
-  .div-total input {
-    height: 30px;
-  }
-
-  .div-total span {
-    font-size: 25.2px;
-    left: 44px;
-    line-height: 14px;
-  }
-
-  .botonesEdicion {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 324px;
-    height: 89px;
-    left: 12px;
-    top: 709px;
-  }
-
-  .Añadir {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 87px;
-    height: 62px;
-  }
-
-  .Añadir label,
-  .eliminar label,
-  .genBoleta label {
-    top: 50px;
-    right: 50px;
-  }
-
-  .Añadir img,
-  .eliminar img,
-  .genBoleta img {
-    left: 15px;
-  }
-
-  .eliminar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 87px;
-    height: 62px;
-  }
-
-  .genBoleta {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 87px;
-    height: 62px;
-  }
-
-  .div-cliente {
-    display: none;
-  }
-
-  .retroceso {
-    display: none;
-  }
-
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
 }
