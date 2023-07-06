@@ -2,11 +2,29 @@ html,
 body {
   font-family: "Roboto";
 }
-
 .Franja {
-  height: 7px;
+  height: 12px;
   background-color: black;
+  position: relative;
+  overflow: hidden;
+  margin: 15px;
 }
+
+.Franja:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: gray;
+  transition: width 0.5s;
+}
+
+.Franja:hover:before {
+  width: 100%;
+}
+
 
 .Cabecera {
   display: flex;
@@ -101,6 +119,15 @@ td {
   background-color: #fff;
 }
 
+.titulo-invetario{
+  width: 310px;
+  color: #000000;
+  white-space: nowrap;
+  border-right: 4px solid;
+  animation: typing 2s steps(500), blink .5s infinite step-end ;
+  overflow: hidden;
+  transition: .5s;
+}
 @keyframes typing {
   from {
     width: 0;
@@ -108,11 +135,10 @@ td {
 }
 
 @keyframes blink {
-  50% {
+  0% {
     border-color: transparent;
   }
 }
-
 .button-container {
   display: flex;
   justify-content: center;
@@ -142,6 +168,12 @@ button#btn-registrar {
   align-content: center;
   flex-wrap: nowrap;
 }
+button#btn-registrar:active{
+  scale: 1.1;
+  background-image: linear-gradient(160deg,
+      #74a886, #92D6AA, #74a886);
+  transition: .3s;
+}
 button#btn-editar {
   overflow: auto;
 
@@ -159,6 +191,12 @@ button#btn-editar {
   line-height: 25px;
   flex-direction: row-reverse;
   align-items: center;
+}
+button#btn-editar:active{
+  scale: 1.1;
+  background-image: linear-gradient(160deg,
+      #b8c94f, #e8fd65, #b8c94f);
+  transition: .3s;
 }
 button#btn-eliminar {
   height: 55px;
@@ -181,6 +219,12 @@ button#btn-eliminar {
   flex-direction: row-reverse;
   overflow: hidden;
 }
+button#btn-eliminar:active{
+  scale: 1.1;
+  background-image: linear-gradient(160deg,
+      #b4bec0, #d0dde0, #b4bec0);
+  transition: .3s;
+}
 button#btn-cancelar {
   height: 55px;
   background: #ff8588;
@@ -200,6 +244,12 @@ button#btn-cancelar {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   flex-direction: row-reverse;
   overflow: hidden;
+}
+button#btn-cancelar:active{
+  scale: 1.1;
+  background-image: linear-gradient(160deg,
+      #c56768, #ff8588, #c56768);
+  transition: .3s;
 }
 
 label {

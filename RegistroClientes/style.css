@@ -4,10 +4,27 @@ body {
 }
 
 .Franja {
-  height: 7px;
+  height: 12px;
   background-color: black;
+  position: relative;
+  overflow: hidden;
+  margin: 15px;
 }
 
+.Franja:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: gray;
+  transition: width 0.5s;
+}
+
+.Franja:hover:before {
+  width: 100%;
+}
 .Cabecera {
   display: flex;
   align-items: flex-end;
@@ -95,6 +112,15 @@ td {
   z-index: 1;
   background-color: #fff;
 }
+.titulo-clientes{
+  width: 310px;
+  color: #000000;
+  white-space: nowrap;
+  border-right: 4px solid;
+  animation: typing 2s steps(500), blink .5s infinite step-end ;
+  overflow: hidden;
+  transition: .5s;
+}
 
 @keyframes typing {
   from {
@@ -103,7 +129,7 @@ td {
 }
 
 @keyframes blink {
-  50% {
+  0% {
     border-color: transparent;
   }
 }

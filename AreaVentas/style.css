@@ -17,7 +17,7 @@ body {
 }
 
 @keyframes blink {
-  50% {
+  0% {
     border-color: transparent;
   }
 }
@@ -48,6 +48,7 @@ body {
 .Franja:hover:before {
   width: 100%;
 }
+/**/
 
 /**/
 .BarraBuscar {
@@ -130,6 +131,7 @@ button#btn-boleta:active {
       #74a886, #92D6AA, #74a886);
   transition: .3s;
 }
+
 button#btn-eliminar {
   height: 55px;
   background: #D0565A;
