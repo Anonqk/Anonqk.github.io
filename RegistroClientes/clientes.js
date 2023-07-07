@@ -158,7 +158,7 @@ $(document).ready(function () {
     $("#validationCustom04").val(telefono);
   });
 
-  // Evento de clic en el botón "Editar"
+  // Evento de click en el BOTON EDITAR
   $("#btn-editar").on("click", function () {
     // Verificar si hay una fila seleccionada
     if (filaSeleccionada === null) {
@@ -216,6 +216,62 @@ $(document).ready(function () {
               );
             });
         });
+      });
+    }
+  });
+  // Función para limpiar la tabla
+  function limpiarTabla() {
+    $("#tablaBodyClientes").empty();
+  }
+  //EVENTO DE CLICK EN BOTON BUSCAR
+  $("#btn-buscar").on("click", function () {
+    var criterioBusqueda = $("#input-busqueda").val().toLowerCase();
+
+    // Verificar si el campo de búsqueda está vacío
+    if (criterioBusqueda.trim() === "") {
+      alert("Ingresa un criterio de búsqueda");
+      return;
+    } else {
+      var uid = localStorage.getItem("uid");
+      var clientesRef = database.ref("Usuarios/" + uid + "/Clientes");
+      clientesRef.once("value", function (snapshot) {
+        var clientesEncontrados = [];
+        limpiarTabla();
+        snapshot.forEach(function (childSnapshot) {
+          var cliente = childSnapshot.val();
+
+          if (
+            cliente.Nombre.toLowerCase().indexOf(criterioBusqueda) !== -1 ||
+            cliente.Apellido.toLowerCase().indexOf(criterioBusqueda) !== -1 ||
+            cliente.DNI.toLowerCase().indexOf(criterioBusqueda) !== -1 ||
+            cliente.Telefono.toLowerCase().indexOf(criterioBusqueda) !== -1
+          ) {
+            clientesEncontrados.push(cliente);
+
+            // Agregar la fila a la tabla
+            var row = tablaBodyClientes.insertRow();
+            row.classList.add("selectable-row"); // Agregar la clase "selectable-row" a la fila
+            row.setAttribute("data-dni", cliente.DNI);
+            row.setAttribute("data-key", childSnapshot.key);
+            var cellNumero = row.insertCell();
+            var cellNombres = row.insertCell();
+            var cellApellidos = row.insertCell();
+            var cellDNI = row.insertCell();
+            var cellTelefono = row.insertCell();
+
+            cellNumero.innerHTML = clientesEncontrados.length; // Usar el índice en los clientes encontrados como número de fila
+            cellNombres.innerHTML = cliente.Nombre;
+            cellApellidos.innerHTML = cliente.Apellido;
+            cellDNI.innerHTML = cliente.DNI;
+            cellTelefono.innerHTML = cliente.Telefono;
+          }
+        });
+
+        if (clientesEncontrados.length > 0) {
+          console.log("Clientes encontrados:", clientesEncontrados);
+        } else {
+          alert("No se encontró ningún cliente con el dato ingresado");
+        }
       });
     }
   });
