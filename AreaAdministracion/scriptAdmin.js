@@ -1,6 +1,3 @@
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-
 const defaultFile = 'https://stonegatesl.com/wp-content/uploads/2021/01/avatar-300x300.jpg';
 
 const file = document.getElementById('foto');
