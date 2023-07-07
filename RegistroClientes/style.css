@@ -168,6 +168,12 @@ button#btn-registrar {
   align-content: center;
   flex-wrap: nowrap;
 }
+button#btn-registrar:active{
+  scale: 1.1;
+  background-image: linear-gradient(160deg,
+      #639173, #92d6aa, #639173);
+  transition: .3s;
+}
 button#btn-editar {
   overflow: auto;
 
@@ -184,7 +190,14 @@ button#btn-editar {
   font-size: 21px;
   line-height: 25px;
   flex-direction: row-reverse;
+ 
   align-items: center;
+}
+button#btn-editar:active{
+  scale: 1.1;
+  background-image: linear-gradient(160deg,
+      #afbe4a, #e8fd65, #afbe4a);
+  transition: .3s;
 }
 button#btn-eliminar {
   height: 55px;
@@ -207,6 +220,12 @@ button#btn-eliminar {
   flex-direction: row-reverse;
   overflow: hidden;
 }
+button#btn-eliminar:active{
+  scale: 1.1;
+  background-image: linear-gradient(160deg,
+      #a0a9ac, #d0dde0, #a0a9ac);
+  transition: .3s;
+}
 button#btn-cancelar {
   height: 55px;
   background: #ff8588;
@@ -227,8 +246,22 @@ button#btn-cancelar {
   flex-direction: row-reverse;
   overflow: hidden;
 }
-
-.selectable-row:hover {
-  cursor: pointer;
+button#btn-cancelar:active{
+  scale: 1.1;
+  background-image: linear-gradient(160deg,
+      #c06263, #ff8588, #c06263);
+  transition: .3s;
 }
 
+.Volver:active{
+  scale: 1.1;
+  background-image: linear-gradient(160deg,
+      #0000, #0000, #0000);
+  transition: .3s;
+}
+.imgBuscar:active{
+  scale: 1.3;
+  background-image: linear-gradient(160deg,
+      #0000, #0000, #0000);
+  transition: .3s;
+}
