@@ -33,7 +33,8 @@
               border-radius: 50%;
               border: 6px solid #AAA;
           ">
-              <input type="file" name="foto" id="foto" accept="image/*">
+              <input type="file" name="foto" id="fileInp" onchange="getFile(event)" accept="image/png, image/jpeg">
+              <button onclick="uploadImage()">cargar</button>
             </div>
             <div class="text-center">
               <button class="btn btn-primary">Guardar</button>
@@ -58,6 +59,7 @@
       </div>
     </div>
   </div>
+  <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
   <script src="scriptAdmin.js"></script>
 
 </body>
