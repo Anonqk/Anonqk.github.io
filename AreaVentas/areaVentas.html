@@ -1,228 +1,498 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Área de Ventas</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="../logoECODAR.png" />
+  </head>
 
-<body>
+  <body>
+    <!--CABECERA-->
     <div class="container">
-        <div class="row">
-            <div class="Cabecera">
-                <div class="col-sm-10 col-md-10 col-lg-10 col-xl-10">
-                    <div class="Titulo">
-                        <h1 class="titulo-ventas">Registro de Ventas</A></h1>
-                    </div>
-                </div>
-                <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
-                <div class="Logo">
-                    <input type="image" src="LOGOTI.PNG" class="imgLogo" width="80px" height="70px" />
-                </div>
-                </div>
+      <div class="row">
+        <div class="Cabecera">
+          <div class="col-sm-10 col-md-10 col-lg-10 col-xl-10">
+            <div class="Titulo">
+              <h1>Registro de Ventas</h1>
             </div>
-            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                <div class="Franja"></div>
+          </div>
+          <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2">
+            <div class="Logo">
+              <input
+                type="image"
+                src="../logoECODAR.png"
+                class="imgLogo"
+                width="80px"
+                height="70px"
+              />
             </div>
+          </div>
         </div>
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <div class="Franja"></div>
+        </div>
+      </div>
     </div>
 
     <!--buscadores-->
     <div class="container">
-        <div class="row">
-            <div class="CajasTexto">
-                <!--imagenes-->
-                <div class="col-sm-12 col-md-4 col-lg-2 col-xl-3">
-                    <img class="img-fluid" src="ventas-marca.png" width="150px" height="190px" />
-                </div>
-                <!-- buscadores-->
-                <div class="col-sm-12 col-md-8 col-lg-10 col-xl-9">
-                    <div class="container">
-                        <form class="needs-validation" novalidate>
-                            <div class="row">
-                                <div class="col-md-10" style="padding-bottom: 2rem">
-                                    <div class="form-group">
-                                        <div class="input-group">
-                                            <input type="text" class="form-control" id="validationCustom01" required
-                                                placeholder="DNI:-" />
-                                            <div class="input-group-append">
-                                                <button class="btn btn-outline-secondary" type="button">
-                                                    <img src="buscar.png" alt="Buscar" class="img-fluid"
-                                                        style="width: 38px; height: 30px; ">
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-10" style="padding-bottom: 1rem">
-                                        <div class="form-group">
-                                            <div class="input-group">
-                                                <input type="text" class="form-control" id="validationCustom03" required
-                                                    placeholder="PRODUCTOS:-" />
-                                                <div class="input-group-append">
-                                                    <button class="btn btn-outline-secondary" type="button">
-                                                        <img src="buscar.png" alt="Buscar" class="img-fluid"
-                                                            style="width: 38px; height: 30px; ">
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <!--botones-->
-    <div class="container">
-        <div class="row m-3">
-            <div class="col-md-6 col-lg-3">
-                <div class="button-container">
-                    <button class="btn btn border-black btn-block" id="btn-registrar">
-                        Registrar<img src="Agreagar.png" alt="img Registrar" />
-                    </button>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="button-container">
-                    <button class="btn btn-primary border-black btn-block" id="btn-boleta">
-                        Boleta<img src="aprobar.png" alt="img Limpiar" />
-                    </button>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="button-container">
-                    <button class="btn btn-primary border-black btn-block" id="btn-eliminar">
-                        Eliminar<img src="eliminar.png" alt="img Cancelar" />
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="row m-2">
-          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
-            
+      <div class="row">
+        <div class="CajasTexto">
+          <!--imagenes-->
+          <div class="col-sm-12 col-md-4 col-lg-2 col-xl-3">
+            <img
+              class="img-fluid"
+              src="ventas-marca.png"
+              width="150px"
+              height="190px"
+            />
           </div>
-          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
-            <div
-              class="table-responsive border"
-              style="max-height: 400px; overflow-y: auto;"
-            >
-              <table class="table table-striped table-hover">
-                <thead class="table-dark sticky-header">
-                  <tr>
-                    <th>Codigo</th>
-                    <th>Nombre del Producto</th>
-                    <th>Descripción</th>
-                    <th>Precio Unitario</th>
-                    <th>Cantidad</th>
-                    <th>Subtotal</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                      <th scope="row">C001</th>
-                      <td>Lapiz</td>
-                      <td>Lapiz 2B</td>
-                      <td>S/3.00</td>
-                      <td>3</td>
-                      <td>S/9.00</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">C003</th>
-                      <td>Cuaderno</td>
-                      <td>Standford</td>
-                      <td>S/4.00</td>
-                      <td>2</td>
-                      <td>S/8.00</td>
-                    </tr>
-                    <th scope="row">C004</th>
-                    <td>Lapiz</td>
-                    <td>Lapiz 4B</td>
-                    <td>S/3.50</td>
-                    <td>3</td>
-                    <td>S/10.50</td>
-                    </tr> <tr>
-                        <th scope="row">C002</th>
-                        <td>Borrador</td>
-                        <td>Faber Castell</td>
-                        <td>S/1.00</td>
-                        <td>2</td>
-                        <td>S/2.00</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">C007</th>
-                        <td>Regla</td>
-                        <td>Artesco</td>
-                        <td>S/3.00</td>
-                        <td>1</td>
-                        <td>S/3.00</td>
-                    </tr><tr>
-                     
-                    </tr><tr>
-                      <th scope="row"></th>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr><tr>
-                        <th scope="row"></th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr><tr>
-                        <th scope="row"></th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr><tr>
-                        <th scope="row"></th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>                
-                </tbody>
-              </table>
+          <!-- buscadores-->
+          <div class="col-sm-12 col-md-8 col-lg-10 col-xl-9">
+            <div class="container">
+              <form class="needs-validation" novalidate>
+                <div class="row">
+                  <div class="col-md-10" style="padding-bottom: 2rem">
+                    <div class="form-group">
+                      <div class="input-group">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="validationCustom01"
+                          required
+                          placeholder="Buscar Cliente:-"
+                        />
+                        <div class="input-group-append">
+                          <button
+                            id="btn-buscarclientes"
+                            class="btn btn-outline-secondary"
+                            type="button"
+                          >
+                            <img
+                              src="buscar.png"
+                              alt="Buscar"
+                              class="img-fluid"
+                              style="width: 38px; height: 30px"
+                            />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-10" style="padding-bottom: 1rem">
+                    <div class="form-group">
+                      <div class="input-group">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="validationCustom02"
+                          required
+                          placeholder="Buscar Productos:-"
+                        />
+                        <div class="input-group-append">
+                          <button
+                            id="btn-buscarproductos"
+                            class="btn btn-outline-secondary"
+                            type="button"
+                          >
+                            <img
+                              src="buscar.png"
+                              alt="Buscar"
+                              class="img-fluid"
+                              style="width: 38px; height: 30px"
+                            />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
         </div>
       </div>
-      <div class="container">
-        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
-            <div class="Volver"><a
-            href="../MenuPrincipal/menuprincipal.html"
-            style="text-decoration: none; color: black; border-color: white;"
-            >
-            <button type="button" class="Volver">
-                Volver<img src="retroceder.png" alt="img Volver" />
-            </button>
+    </div>
+
+    <!--contenedor INPUTS-->
+    <div class="container">
+      <div class="row">
+        <div class="CajasTexto">
+          <div class="col">
+            <div class="container">
+              <form class="needs-validation" novalidate>
+                <div class="row">
+                  <div class="col">
+                    <div class="form-group">
+                      <label for="validationCustom03"
+                        ><h5>Nro. Boleta:</h5></label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="validationCustom03"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-group">
+                      <label for="validationCustom04"><h5>Nombres:</h5></label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="validationCustom04"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-group">
+                      <label for="validationCustom05"
+                        ><h5>Apellidos:</h5></label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="validationCustom05"
+                        required
+                        readonly
+                      />
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-group">
+                      <label for="validationCustom06"><h5>DNI:</h5></label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="validationCustom06"
+                        required
+                        readonly
+                      />
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-group">
+                      <label for="validationCustom07"
+                        ><h5>Teléfonos:</h5></label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="validationCustom07"
+                        required
+                        readonly
+                      />
+                    </div>
+                  </div>
+                </div>
+              </form>
             </div>
+          </div>
         </div>
+      </div>
+    </div>
+
+    <!--botones-->
+    <div class="container">
+      <div class="row m-1">
+        <div class="col-md">
+          <div class="button-container">
+            <button class="btn btn btn-block" id="btn-registrarventa">
+              Registrar Venta<img
+                src="Registrar.png"
+                alt="img Registrar Venta"
+              />
+            </button>
+          </div>
         </div>
 
+        <div class="col-md">
+          <div class="button-container">
+            <button class="btn btn btn-block" id="btn-eliminarventa">
+              Eliminar Dato<img src="eliminar.png" alt="img Eliminar Venta" />
+            </button>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="button-container">
+            <button class="btn btn btn-block" id="btn-cancelarventa">
+              Cancelar Venta<img src="cancelar.png" alt="img Cancelar Venta" />
+            </button>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="button-container">
+            <button class="btn btn btn-block" id="btn-generarboleta">
+              Generar Boleta<img src="boleta.svg" alt="img Generar Boleta" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <!--TABLA DE DATOS-->
+    <div class="container">
+      <div class="row m-2">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12"></div>
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <div
+            class="table-responsive border"
+            style="max-height: 400px; overflow-y: auto"
+            id="tablaprincipal"
+          >
+            <table
+              class="table table-bordered table-striped table-hover text-center"
+            >
+              <thead class="table-dark sticky-header">
+                <tr>
+                  <th>Número</th>
+                  <th>Código</th>
+                  <th>Descripción del Producto</th>
+                  <th>Precio Unitario</th>
+                  <th>Cantidad</th>
+                  <th>Subtotal</th>
+                </tr>
+              </thead>
+              <tbody id="tbody_productos"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-        crossorigin="anonymous"></script>
-</body>
+    <!-- Pop-up para resultados de búsqueda de clientes -->
+    <!--POPUP CLIENTES-->
+    <div id="popup-clientes" class="modal">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Resultados de la búsqueda de clientes</h5>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container" style="padding-left: 0; padding-right: 0">
+              <!--TABLA DEL POPUP CLIENTES-->
+              <div class="row justify-content" style="padding-bottom: 1rem">
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                  <div
+                    class="table-responsive border"
+                    style="max-height: 400px; overflow-y: auto"
+                  >
+                    <table
+                      class="table table-bordered table-striped table-hover text-center"
+                      id="tablaResultadosClientes"
+                    >
+                      <thead class="table-dark sticky-header">
+                        <tr>
+                          <th>Número</th>
+                          <th>Nombres</th>
+                          <th>Apellidos</th>
+                          <th>DNI</th>
+                          <th>Teléfono</th>
+                        </tr>
+                      </thead>
+                      <tbody id="tbody_resultadosclientes"></tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
 
+              <!--BOTONES DEL POPUP CLIENTES-->
+              <div
+                class="row justify-content-center"
+                style="padding-bottom: 1rem"
+              >
+                <div class="col-md-5">
+                  <div class="form-group">
+                    <div class="text-center">
+                      <button
+                        id="btnAgregarClientes"
+                        class="btn btn-success btn-block btn-lg w-75"
+                      >
+                        Agregar Cliente
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-5">
+                  <div class="form-group">
+                    <div class="text-center">
+                      <button
+                        id="btnCancelarClientes"
+                        class="btn btn-danger btn-block btn-lg w-75"
+                      >
+                        Cancelar
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pop-up para resultados de búsqueda de productos -->
+    <div id="popup-productos" class="modal">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Resultados de la búsqueda de productos</h5>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <!--TABLA DEL POPUP PRODUCTOS-->
+              <div class="row m-2">
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                  <div
+                    class="table-responsive border"
+                    style="max-height: 400px; overflow-y: auto"
+                  >
+                    <table
+                      class="table table-bordered table-striped table-hover text-center"
+                      id="tablaResultadosProductos"
+                    >
+                      <thead class="table-dark sticky-header">
+                        <tr>
+                          <th>Número</th>
+                          <th>Código</th>
+                          <th>Descripción del producto</th>
+                          <th>Stock</th>
+                          <th>Precio</th>
+                        </tr>
+                      </thead>
+                      <tbody id="tbody_resultadosproductos"></tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+              <!--INPUTS DEL POPUP PRODUCTOS-->
+              <div
+                class="row justify-content-center"
+                style="padding-bottom: 1rem"
+              >
+                <div class="col-md-5">
+                  <div class="form-group">
+                    <label for="cantidadInput">Cantidad:</label>
+                    <input
+                      type="number"
+                      id="cantidadInput"
+                      class="form-control"
+                      min="1"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-5">
+                  <div class="form-group">
+                    <label for="subtotal_resultados">Subtotal:</label>
+                    <input
+                      type="text"
+                      id="subtotal_resultados"
+                      class="form-control"
+                      readonly
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!--BOTONES DEL POPUP PRODUCTOS-->
+              <div class="row justify-content-center">
+                <div class="col-md-5">
+                  <div class="form-group">
+                    <div class="text-center">
+                      <button
+                        id="btnInsertarProducto"
+                        class="btn btn-success btn-block btn-lg w-75"
+                      >
+                        Añadir a la venta
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-5">
+                  <div class="form-group">
+                    <div class="text-center">
+                      <button
+                        id="btnCancelarProducto"
+                        class="btn btn-danger btn-block btn-lg w-75"
+                      >
+                        Cancelar
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--INPUT TOTAL Y BOTON REGRESAR A MENU PRINCIPAL-->
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="container">
+            <form class="needs-validation" novalidate>
+              <div class="row">
+                <div class="col">
+                  <div class="form-group">
+                    <label for="validationCustom08"><h5>Total:</h5></label>
+                    <input
+                      type="text"
+                      class="form-control w-75"
+                      id="validationCustom08"
+                      required
+                      readonly
+                    />
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col">
+          <div class="Volver">
+            <a
+              href="../MenuPrincipal/menuprincipal.html"
+              style="text-decoration: none; color: black; border-color: white"
+            >
+              <button type="button" class="Volver">
+                Volver<img src="retroceder.png" alt="img Volver" />
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="ventas.js"></script>
+  </body>
 </html>
