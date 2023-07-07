@@ -1,277 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
-        <meta name="viewport" content="initial-scale=1.0" />
-        <link rel="stylesheet" href="style.css" />
-        <title>Area de Inventario</title>
-        <link rel="icon" type="image/x-icon" href="../logoECODAR.png" />
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
-            crossorigin="anonymous"
-        />
-        <style type="text/css" id="operaUserStyle"></style>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+    <meta name="viewport" content="initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Area de Inventario</title>
+    <link rel="icon" type="image/x-icon" href="../logoECODAR.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <style type="text/css" id="operaUserStyle"></style>
   </head>
 
   <body>
-        <div class="container">
-            <div class="row">
-                <div class="Cabecera">
-                     <div class="col-sm-10 col-md-10 col-lg-10 col-xl-10">
-                        <div class="Titulo">
-                            <h1 class="titulo-invetario">Área de Inventario</A></h1>
-                        </div>
-                    </div>
-                    <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2">
-                        <div class="Logo">
-                            <input
-                                type="image"
-                                src="Imagen.png"
-                                class="imgLogo"
-                                width="80px"
-                                height="70px"
-                            />
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                    <div class="Franja"></div>
-                </div>
-            </div>
-        </div>
-
-        <!--FORMULARIO PRODUCTOS-->
-        <div class="container">
-        <div class="row">
-            <div class="CajasTexto">
-            <!--contenedor imagen-->
-            <div class="col-sm-12 col-md-4 col-lg-2 col-xl-3">
-                <img
-                class="img-fluid"
-                src="imagen_Inventario.png"
-                width="150px"
-                height="190px"
-                />
-            </div>
-            <!--contenedor preguntas-->
-            <div class="col-sm-12 col-md-8 col-lg-10 col-xl-9">
-                <div class="container">
-                <form class="needs-validation" novalidate>
-                    <div class="row">
-                    <div class="col-md-6" style="padding-bottom: 1rem">
-                        <div class="form-group">
-                        <label for="validationCustom01"><h5>Nombre del Producto:</h5></label>
-                        <input
-                            type="text"
-                            class="form-control"
-                            id="validationCustom01"
-                            required
-                        />
-                        </div>
-                    </div>
-                    <div class="row">
-                    <div class="col-md-6" style="padding-bottom: 1rem">
-                        <div class="form-group">
-                        <label for="validationCustom03"><h5>Precio:</h5></label>
-                        <input
-                            type="text"
-                            class="form-control"
-                            id="validationCustom03"
-                            required
-                        />
-                        </div>
-                    </div>
-                    <div class="col-md-6" >
-                        <div class="form-group">
-                        <label for="validationCustom04"
-                            ><h5>Stock:</h5></label
-                        >
-                        <input
-                            type="text"
-                            class="form-control"
-                            id="validationCustom04"
-                            required
-                        />
-                        </div>
-                    </div>
-                    </div>
-                </form>
-                </div>
-            </div>
-            </div>
-        </div>
-        </div>
-
-        <!--BOTONES-->
-        <div class="container">
-        <div class="row m-3">
-            <div class="col-md-6 col-lg-3">
-            <div class="button-container">
-                <button class="btn btn border-black btn-block" id="btn-registrar">
-                Registrar<img src="Registrar.png" alt="img Registrar" />
-                </button>
-            </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-            <div class="button-container">
-                <button class="btn btn border-black btn-block" id="btn-editar">
-                Editar<img src="Editar.png" alt="Editar.png" />
-                </button>
-            </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-            <div class="button-container">
-                <button
-                class="btn btn-primary border-black btn-block"
-                id="btn-eliminar"
-                >
-                Eliminar<img src="Limpiar.png" alt="img Limpiar" />
-                </button>
-            </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-            <div class="button-container">
-                <button
-                class="btn btn-primary border-black btn-block"
-                id="btn-cancelar"
-                >
-                Cancelar<img src="Cancelar.png" alt="img Cancelar" />
-                </button>
-            </div>
-            </div>
-        </div>
-        </div>
-
-         <!--TABLA Y BUSCAR PRODUCTO-->
     <div class="container">
-        <div class="row m-2">
-          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
-            <div class="BuscarProducto">
-              <div class="BarraBuscar">
-                <input
-                  class="form-control"
-                  type="text"
-                  placeholder="BUSCAR PRODUCTO O CODIGO"
-                  aria-label="default input example"
-                />
-              </div>
-              <div class="ImgBuscar">
-                <input type="image" src="Buscar.png" class="imgBuscar" />
-              </div>
+      <div class="row">
+        <div class="Cabecera">
+          <div class="col-sm-10 col-md-10 col-lg-10 col-xl-10">
+            <div class="Titulo">
+              <h1>Area de Inventario</h1>
             </div>
           </div>
-          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
-            <div
-              class="table-responsive border"
-              style="max-height: 400px; overflow-y: auto;"
-            >
-              <table class="table table-striped table-hover">
-                <thead class="table-dark sticky-header">
-                  <tr>
-                    <th>Codigo</th>
-                    <th>Nombre del Producto</th>
-                    <th>Stock</th>
-                    <th>Precio</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                      <th scope="row">C001</th>
-                      <td>Lapiz</td>
-                      <td>10</td>
-                      <td>S/3.00</td>
-                      <!-- Nuevo dato -->
-                    </tr>
-                    <tr>
-                      <th scope="row">C002</th>
-                      <td>Borrador</td>
-                      <td>15</td>
-                      <td>S/2.00</td>
-                      <!-- Nuevo dato -->
-                    </tr><tr>
-                      <th scope="row">C003</th>
-                      <td>Lapicero</td>
-                      <td>20</td>
-                      <td>S/2.50</td>
-                      <!-- Nuevo dato -->
-                    </tr><tr>
-                      <th scope="row"></th>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <!-- Nuevo dato -->
-                    </tr><tr>
-                      <th scope="row"></th>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <!-- Nuevo dato -->
-                    </tr><tr>
-                      <th scope="row"></th>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <!-- Nuevo dato -->
-                    </tr><tr>
-                      <th scope="row"></th>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <!-- Nuevo dato -->
-                    </tr><tr>
-                      <th scope="row"></th>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <!-- Nuevo dato -->
-                    </tr>
-                  <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
+          <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2">
+            <div class="Logo">
+              <input
+                type="image"
+                src="Imagen.png"
+                class="imgLogo"
+                width="80px"
+                height="70px"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <div class="Franja"></div>
+        </div>
+      </div>
+    </div>
+
+    <!--FORMULARIO PRODUCTOS-->
+    <div class="container">
+      <div class="row">
+        <div class="CajasTexto">
+          <!--contenedor imagen-->
+          <div class="col-sm-12 col-md-4 col-lg-2 col-xl-3">
+            <img
+              class="img-fluid"
+              src="imagen_Inventario.png"
+              width="150px"
+              height="190px"
+            />
+          </div>
+          <!--contenedor preguntas-->
+          <div class="col-sm-12 col-md-8 col-lg-10 col-xl-9">
+            <div class="container">
+              <form class="needs-validation" novalidate>
+                <div class="row">
+                  <div class="col-md-6" style="padding-bottom: 1rem">
+                    <div class="form-group">
+                      <label for="validationCustom01"
+                        ><h5>Descripción del Producto:</h5></label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="validationCustom01"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6" style="padding-bottom: 1rem">
+                      <div class="form-group">
+                        <label for="validationCustom04"><h5>Stock:</h5></label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="validationCustom02"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-6" style="padding-bottom: 1rem">
+                      <div class="form-group">
+                        <label for="validationCustom03"><h5>Precio:</h5></label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="validationCustom03"
+                          required
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-        <div class="container">
+    <!--BOTONES-->
+    <div class="container">
+      <div class="row m-3">
+        <div class="col-md-6 col-lg-3">
+          <div class="button-container">
+            <button class="btn btn border-black btn-block" id="btn-registrar">
+              Registrar<img src="Registrar.png" alt="img Registrar" />
+            </button>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="button-container">
+            <button class="btn btn border-black btn-block" id="btn-editar">
+              Editar<img src="Editar.png" alt="Editar.png" />
+            </button>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="button-container">
+            <button
+              class="btn btn-primary border-black btn-block"
+              id="btn-eliminar"
+            >
+              Eliminar<img src="Limpiar.png" alt="img Limpiar" />
+            </button>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="button-container">
+            <button
+              class="btn btn-primary border-black btn-block"
+              id="btn-cancelar"
+            >
+              Cancelar<img src="Cancelar.png" alt="img Cancelar" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--TABLA Y BUSCAR PRODUCTO-->
+    <div class="container">
+      <div class="row m-2">
+        <!--BARRA BUSQUEDA-->
         <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
-            <div class="Volver"><a
+          <div class="BuscarProducto">
+            <div class="BarraBuscar">
+              <input
+                class="form-control"
+                type="text"
+                placeholder="BUSCAR PRODUCTO O CODIGO"
+                aria-label="default input example"
+                id="input-busqueda"
+              />
+            </div>
+            <div class="ImgBuscar" id="btn-buscar">
+              <input type="image" src="Buscar.png" class="imgBuscar" />
+            </div>
+          </div>
+        </div>
+
+        <!--TABLA DE DATOS DE CLIENTES-->
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <div
+            class="table-responsive border"
+            style="max-height: 400px; overflow-y: auto"
+          >
+            <table
+              class="table table-bordered table-striped table-hover text-center"
+            >
+              <thead class="table-dark sticky-header">
+                <tr>
+                  <th>Número</th>
+                  <th>Codigo</th>
+                  <th>Descripción del Producto</th>
+                  <th>Stock</th>
+                  <th>Precio</th>
+                </tr>
+              </thead>
+              <tbody id="tbodyProductos"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <div class="Volver">
+          <a
             href="../MenuPrincipal/menuprincipal.html"
             style="text-decoration: none; color: black"
-            >
+          >
             <button type="button" class="Volver">
-                Volver<img src="Volver.png" alt="img Volver" />
-            </button>
-            </div>
+              Volver<img src="Volver.png" alt="img Volver" /></button
+          ></a>
         </div>
-        </div>
+      </div>
+    </div>
 
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    
-
-
-
-
-        <script src="clientes.js"></script>
+    <script src="Inventario.js"></script>
   </body>
 </html>
