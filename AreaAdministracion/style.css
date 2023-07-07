@@ -216,7 +216,7 @@ text-align: center;
 color: #000000;
 }
 
-button.float-right {
+.button.float-right {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
