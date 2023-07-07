@@ -275,4 +275,98 @@ $(document).ready(function () {
       });
     }
   });
+  //BOTON ELIMINAR
+  $("#btn-eliminar").on("click", function () {
+    // Verificar si hay una fila seleccionada
+    if (!filaSeleccionada) {
+      alert("No hay cliente seleccionado");
+      return;
+    }
+
+    // Obtener la clave del cliente seleccionado
+    var clienteKey = $(filaSeleccionada).data("key");
+
+    // Verificar si se ha seleccionado un cliente válido
+    if (!clienteKey) {
+      alert("No se encontró la clave del cliente seleccionado");
+      return;
+    }
+
+    // Obtener la referencia al cliente en la base de datos
+    var uid = localStorage.getItem("uid");
+    var clienteRef = database.ref(
+      "Usuarios/" + uid + "/Clientes/" + clienteKey
+    );
+
+    // Eliminar el cliente de la base de datos
+    clienteRef
+      .remove()
+      .then(function () {
+        console.log("Cliente eliminado exitosamente");
+        // Volver a cargar los clientes en la tabla
+        cargarClientesEnTabla();
+        // Resetear el formulario
+        $("#validationCustom01").val("");
+        $("#validationCustom02").val("");
+        $("#validationCustom03").val("");
+        $("#validationCustom04").val("");
+        // Desmarcar la fila seleccionada
+        $(filaSeleccionada).removeClass("selected");
+        // Restablecer el color de fondo de las filas
+        $("tr.selectable-row").css("--bs-table-bg", "");
+      })
+      .catch(function (error) {
+        console.error("Error al eliminar el cliente:", error);
+      });
+  });
 });
+
+//BOTON CANCELAR
+$(document).ready(function () {
+  // Evento de clic en el botón "Cancelar"
+  $("#btn-cancelar").on("click", function () {
+    // Reiniciar el formulario
+    $("form.needs-validation")[0].reset();
+    $("form.needs-validation").removeClass("was-validated");
+
+    // Limpiar el campo de búsqueda
+    $("#input-busqueda").val("");
+
+    // Reiniciar la tabla cargando los clientes desde el Realtime Database
+    cargarClientesEnTabla();
+  });
+});
+
+function cargarClientesEnTabla() {
+  var uid = localStorage.getItem("uid");
+  var clientesRef = database.ref("Usuarios/" + uid + "/Clientes");
+
+  clientesRef.once("value", function (snapshot) {
+    var tablaBody = $("#tablaBodyClientes");
+    tablaBody.empty();
+
+    var contador = 1;
+
+    snapshot.forEach(function (childSnapshot) {
+      var cliente = childSnapshot.val();
+
+      var row = tablaBody[0].insertRow();
+      row.classList.add("selectable-row");
+      row.setAttribute("data-dni", cliente.DNI);
+      row.setAttribute("data-key", childSnapshot.key);
+      var cellNumero = row.insertCell();
+      var cellNombres = row.insertCell();
+      var cellApellidos = row.insertCell();
+      var cellDNI = row.insertCell();
+      var cellTelefono = row.insertCell();
+
+      cellNumero.innerHTML = contador;
+      cellNombres.innerHTML = cliente.Nombre;
+      cellApellidos.innerHTML = cliente.Apellido;
+      cellDNI.innerHTML = cliente.DNI;
+      cellTelefono.innerHTML = cliente.Telefono;
+
+      contador++;
+    });
+  });
+}
