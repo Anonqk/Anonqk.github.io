@@ -227,3 +227,8 @@ button#btn-cancelar {
   flex-direction: row-reverse;
   overflow: hidden;
 }
+
+.selectable-row:hover {
+  cursor: pointer;
+}
+
