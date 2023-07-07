@@ -19,6 +19,7 @@ width: 100%;
 position: relative;
 overflow: hidden;
 
+
 }
 .franja:before {
 content: "";
@@ -150,6 +151,11 @@ caret-color: transparent; /* Hace que el punto de inserción sea transparente */
 .edicion-logo input {
   width: 142.5px;
   height: 140.50px;
+}
+
+.container{
+  font-family: Roboto;
+  color: #000000;
 }
 
 /**/
