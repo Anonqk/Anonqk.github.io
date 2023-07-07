@@ -1,46 +1,55 @@
 <!DOCTYPE html>
-<html lang="es"><head>
+<html lang="es">
+
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css" />
   <title>Menú de Administración</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-storage.js"></script>
 </head>
+
 <body>
   <div class="container">
     <div class="row">
       <div class="col-md-12 col-sm-12">
         <h1 class="text">Administración</h1>
-<div class="Franja" style="
+        <div class="Franja" style="
     height: 7px;
     background-color: black;
 "></div><img src="administracion.png" class="img-fluid" alt="Descripción de la imagen">
-        <img src="My project-1.png" class="img-fluid float-right"><div class="card">
+        <img src="My project-1.png" class="img-fluid float-right">
+        <div class="card">
           <div class="card-body">
             <div class="form-group">
               <label for="inputNombreEmpresa">Nombre de la empresa:</label>
-              <input type="text" class="form-control" id="inputNombreEmpresa" placeholder="Ingrese el nombre de la empresa">
+              <input type="text" class="form-control" id="inputNombreEmpresa"
+                placeholder="Ingrese el nombre de la empresa">
             </div>
             <div>
-              <img src="https://stonegatesl.com/wp-content/uploads/2021/01/avatar-300x300.jpg" alt="avatar" id="img" style="
+              <img src="https://stonegatesl.com/wp-content/uploads/2021/01/avatar-300x300.jpg" alt="avatar" id="img"
+                style="
               width: 200px;
               border-radius: 50%;
               border: 6px solid #AAA;
           ">
-        <input type="file" name="foto" id="foto" accept="image/*">
-        <label for="foto">Cambiar foto</label>
-      </div><div class="text-center">
+              <input type="file" name="foto" id="foto" accept="image/*">
+              <label for="foto">Cambiar foto</label>
+            </div>
+            <div class="text-center">
               <button class="btn btn-primary">Guardar</button>
               <button class="btn btn-secondary">Limpiar</button>
             </div>
           </div>
-            
+
         </div>
-        
+
       </div>
     </div>
   </div>
-  
+
   <div class="container">
     <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
       <div class="Volver">
@@ -51,6 +60,9 @@
             Volver<img src="retroceder.png" alt="img Volver"></button></a>
       </div>
     </div>
-  </div><script src="scriptAdmin.js"></script>
+  </div>
+  <script src="scriptAdmin.js"></script>
 
-</body></html>
+</body>
+
+</html>
