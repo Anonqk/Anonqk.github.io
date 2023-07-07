@@ -12,6 +12,22 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
+const defaultFile = 'https://stonegatesl.com/wp-content/uploads/2021/01/avatar-300x300.jpg';
+
+const file = document.getElementById('foto');
+const img = document.getElementById('img');
+file.addEventListener('change', e => {
+  if (e.target.files[0]) {
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      img.src = e.target.result;
+    }
+    reader.readAsDataURL(e.target.files[0])
+  } else {
+    img.src = defaultFile;
+  }
+});
+
 function uploadImage() {
   const ref = firebase.storage().ref();
   const file = document.querySelector("#photo").files(0);
@@ -31,22 +47,5 @@ function uploadImage() {
         const imageElement = document.querySelector('#img');
         imageElement.src = url;
       })
-
   }
 }
-
-const defaultFile = 'https://stonegatesl.com/wp-content/uploads/2021/01/avatar-300x300.jpg';
-
-const file = document.getElementById('foto');
-const img = document.getElementById('img');
-file.addEventListener('change', e => {
-  if (e.target.files[0]) {
-    const reader = new FileReader();
-    reader.onload = function (e) {
-      img.src = e.target.result;
-    }
-    reader.readAsDataURL(e.target.files[0])
-  } else {
-    img.src = defaultFile;
-  }
-});
