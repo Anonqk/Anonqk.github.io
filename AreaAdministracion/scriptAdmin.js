@@ -33,7 +33,7 @@ function uploadImage() {
   const file = document.querySelector("#photo").files(0);
   const name = new Date() + '-' + file.name;
   if (file == null) {
-    alert("Debe seleccionar una imagen")
+    alert('Debe seleccionar una imagen')
   } else {
     const metadata = {
       contentType: file.type
@@ -43,7 +43,7 @@ function uploadImage() {
       .them(snapshot => snapshot.ref.getDownloadURL())
       .then(url => {
         console.log(url);
-        alert("Imagen upload successful");
+        alert('Imagen upload successful');
         const imageElement = document.querySelector('#img');
         imageElement.src = url;
       })
