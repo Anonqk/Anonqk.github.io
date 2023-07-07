@@ -1,37 +1,44 @@
 <!DOCTYPE html>
-<html lang="es">
-
-<head>
+<html lang="es"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Área de Administración</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-    <div class="caja-superior">
-        <label for="" class="admin">Administración</label>
-        <div class="franja"></div>
-        <img src="administracion.png" alt="logo de Administración">
-    </div>
-    <div class="caja-central">
-        <div class="edicion-nombre">
-            <span>Ingrese el nombre de la empresa: </span>
-            <input type="text" name="nombre" id="nombre">
+    <title>Menú de Administración</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-sm-12">
+          <h1 class="text">Administración</h1>
+  <div class="Franja" style="
+      height: 7px;
+      background-color: black;
+  "></div><img src="administracion.png" class="img-fluid" alt="Descripción de la imagen">
+          <img src="My project-1.png" class="img-fluid float-right"><div class="card">
+            <div class="card-body">
+              <div class="form-group">
+                <label for="inputNombreEmpresa">Nombre de la empresa:</label>
+                <input type="text" class="form-control" id="inputNombreEmpresa" placeholder="Ingrese el nombre de la empresa">
+              </div>
+              <div>
+          <img src="https://stonegatesl.com/wp-content/uploads/2021/01/avatar-300x300.jpg" alt="avatar" id="img">
+          <input type="file" name="foto" id="foto" accept="image/*">
+          <label for="foto">Cambiar foto</label>
+        </div><div class="text-center">
+                <button class="btn btn-primary">Guardar</button>
+                <button class="btn btn-secondary">Limpiar</button>
+              </div>
+            </div>
+              
+          </div>
+          <div class="caja-inferior-derecha">
+          <span>volver</span>
+          <input type="image" src="retroceder.png" name="retroceder" id="retroceder">
+      </div>
         </div>
-        <div class="edicion-logo">
-            <span>Cambiar logo de la empresa: </span>
-            <input type="image" src="referencia.png">
-        </div>
+      </div>
     </div>
-    <div class="caja-inferior">
-        <button class="guardar"><img src="aprobar.png" alt="imagen de aprobar" >Guardar</button>
-        <button class="eliminar"><img src="cancelar.png" alt="imagen de cancelar" >Eliminar</button>
-    </div>
-    <div class="caja-inferior-derecha">
-        <span>volver</span>
-        <input type="image" src="retroceder.png" name="retroceder" id="retroceder">
-    </div>
-</body>
-
-</html>
+    
+    <script src="script.js"></script>
+  
+  </body></html>
